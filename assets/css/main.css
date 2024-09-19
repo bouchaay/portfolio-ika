@@ -4313,8 +4313,184 @@ input, select, textarea {
     cursor: pointer;
 }
 
-/* about us */
+/* How to wear section */
+.img-htw {
+	width: 25%;
+	height: auto;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	border: 5px solid #fff; /* White border */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Black shadow */
+}
 
+.img-htw:hover {
+	transform: scale(1.05);
+	transition: 1s;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	opacity: 0.8;
+}
+
+/* Créer l'animation */
+@keyframes changeColor {
+	0% {
+	  color: #ff95b5; /* Couleur initiale (rose) */
+	}
+	50% {
+	  color: #ff77a7; /* Couleur intermédiaire (rose clair) */
+	}
+	100% {
+	  color: #ffffff; /* Couleur finale (rose clair) */
+	}
+  }
+  
+  /* Appliquer l'animation au texte */
+  #htw {
+	animation: changeColor 3s infinite; /* Durée de 3 secondes et répétition infinie */
+  }
+
+
+
+
+  /* Celebrities section */
+  /* Image Gallery Styling */
+/* Gallery Layout */
+.image-gallery-celebrities {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Container for each artist */
+.item-celebrities {
+    text-align: center;
+}
+
+/* Styling for image items */
+.image-item-celebrities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux images par ligne */
+    gap: 0px; /* Espacement entre les images */
+    justify-items: center;
+    align-items: center;
+}
+
+/* Image Styling */
+.image-item-celebrities img {
+    width: 90%;
+    height: 750px; /* Fixe une hauteur identique pour toutes les images */
+    object-fit: cover; /* Assure que l'image garde son ratio */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-item-celebrities img:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+/* Celebrity Name Styling */
+.celebrity-name {
+    margin-top: 50px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff4081;
+    text-transform: uppercase;
+}
+
+.celebrity-name:hover {
+    color: #ff77a7;
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+/* Celebrity Description Styling */
+/* Celebrity Description Styling */
+.celebrity-lash {
+    font-size: 1.5em;
+    color: #ff4081;
+    margin-top: 10px; /* Ajuste cette valeur selon tes préférences */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .image-item-celebrities {
+        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+    }
+
+    .image-item-celebrities img {
+        height: 200px; /* Réduire la hauteur sur les petits écrans */
+    }
+}
+
+/* reviews section */
+/* Styles généraux pour la section des critiques */
+.reviews {
+    background-color: #f9f9f9;
+    padding: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Styles pour chaque critique */
+.review {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+	margin-right : 50px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-icon {
+    font-size: 1em;
+    color: #ff4081;
+    margin-right: 15px;
+}
+
+.review-stars {
+    display: flex;
+    align-items: center;
+}
+
+.review-stars i {
+    color: #ffcc00;
+    font-size: 1em;
+    margin-right: 2px;
+}
+
+/* Nom du client */
+.review-name {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Texte de la critique */
+.review-text {
+    font-size: 0.75em;
+    color: #555;
+    line-height: 1.2;
+}
+
+
+  
+  
 
 
 

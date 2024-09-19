@@ -4136,7 +4136,7 @@ input, select, textarea {
     margin: 1em;
     flex: 0 0 calc(100% / 3 - 2em); /* Adjust for responsive design */
     background: #ffe4ef;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 1em;
     transition: background 0.3s ease;
 }
@@ -4174,12 +4174,13 @@ input, select, textarea {
 }
 
 .product-card {
-    background: #222;
-    border: 1px solid #333;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    background: #fff; /* White background for items */
+    border-radius: 12px; /* Rounded corners */
+    margin: 0 0.5em; /* Margin between items */
+    flex: 0 0 calc(100% / 4 - 1em); /* Adjust to fit 4 items */
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -4189,7 +4190,7 @@ input, select, textarea {
 }
 
 .product-card .image img {
-    width: 100%;
+    width: 100%; /* Full width for image */
     height: auto;
 }
 
@@ -4202,9 +4203,10 @@ input, select, textarea {
 }
 
 .product-card .price {
-    font-size: 1.5em;
-    color: #df66ba;
+    font-size: 1.2em; /* Slightly larger font size for price */
+    color: #ff95b5;
     margin: 0.5em 0;
+    font-weight: bold; /* Emphasize price */
 }
 
 .product-card .description {
@@ -4214,7 +4216,7 @@ input, select, textarea {
 }
 
 .product-card .button.primary {
-    background: #df66ba;
+    background: #ff95b5;
     color: #000;
     border: none;
     padding: 0 0.5em;

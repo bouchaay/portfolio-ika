@@ -16,36 +16,134 @@
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
-						<h1 style="color:white;"><a href="index.html">DREAM LASHES </a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-										
-											<li><a href="index.html">Home</a></li>
-											<li><a href="products.html">All Products</a></li>
-											<li><a href="celebrities.html">As trusted by Celebrities<a></li>
-											<li><a href="howtowear.html">How To Wear</a></li>
-											<li><a href="review.html">reviews </a></li>
-											<li><a href="aboutus.html">About Us</a></li>
-											<li><a href="contactUs.html">Contact us</a></li>
+				<header id="header" class="alt" style="background:#ff95b5;">
+					<h1 style="color:white;"><a href="index.html">DREAM LASHES </a></h1>
+					
+					<nav id="nav">
+						<ul>
+							<li class="special">
+								<a href="#menu" class="menuToggle"><span>Menu</span></a>
+								<div id="menu">
+									<ul>
 									
-									</ul>
-									<a href="#menu" class="close"></a></div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="products.html">All Products</a></li>
+										<li><a href="celebrities.html">As trusted by Celebrities<a></li>
+										<li><a href="howtowear.html">How To Wear</a></li>
+										<li><a href="review.html">reviews </a></li>
+										<li><a href="aboutus.html">About Us</a></li>
+										<li><a href="contactUs.html">Contact us</a></li>
+								
+								</ul>
+								<a href="#menu" class="close"></a></div>
+							</li>
+						</ul>
+					</nav>
+				</header>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2 style="color:white;">HOW TO WEAR</h2>
+				<style>
+					#header.alt h1 {
+						pointer-events: none;
+						opacity: 1;
+					}
+				</style>
+
+				
+
+				<section class="how-to-section" style="background: #ffe4ef; padding: 4em 2em;">
+					<h1 class="section-title" style="color: #ff95b5; text-align: center; font-size: 3em; margin-bottom: 1em; padding-top:50px;">How to Wear</h1>
+					<div class="inner" style="display: flex; justify-content: space-around; gap: 2em;">
+					
+					  <!-- Première image - How to Apply -->
+					  <div class="image-container" style="position: relative; width: 45%; height: 500px; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
+						<img src="images/lash-apply.jpg" alt="How to Apply" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease;">
+						<!-- Couche rose -->
+						<div class="pink-overlay" style="
+						  position: absolute;
+						  top: 0;
+						  left: 0;
+						  width: 100%;
+						  height: 100%;
+						  background: rgba(255, 149, 181, 0.5);
+						  transition: opacity 0.4s ease;">
+						</div>
+						<span class="overlay-text" style="
+						  position: absolute;
+						  top: 50%;
+						  left: 50%;
+						  transform: translate(-50%, -50%);
+						  color: #fff;
+						  padding: 1em 2em;
+						  border-radius: 30px;
+						  font-size: 1.5em;
+						  text-transform: uppercase;
+						  letter-spacing: 0.05em;
+						  opacity: 1;
+						  transition: opacity 0.4s ease;
+						">How to Apply</span>
+					  </div>
+					
+					  <!-- Deuxième image - How to Clean -->
+					  <div class="image-container" style="position: relative; width: 45%; height: 500px; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
+						<img src="images/lash-clean.jpg" alt="How to Clean" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease;">
+						<!-- Couche rose -->
+						<div class="pink-overlay" style="
+						  position: absolute;
+						  top: 0;
+						  left: 0;
+						  width: 100%;
+						  height: 100%;
+						  background: rgba(255, 149, 181, 0.5);
+						  transition: opacity 0.4s ease;">
+						</div>
+						<span class="overlay-text" style="
+						  position: absolute;
+						  top: 50%;
+						  left: 50%;
+						  transform: translate(-50%, -50%);
+						  color: #fff;
+						  padding: 1em 2em;
+						  border-radius: 30px;
+						  font-size: 1.5em;
+						  text-transform: uppercase;
+						  letter-spacing: 0.05em;
+						  opacity: 1;
+						  transition: opacity 0.4s ease;
+						">How to Clean</span>
+					  </div>
+					</div>
+				  
+					<!-- CSS Styles for hover effects -->
+					<style>
+					  .image-container:hover img {
+						transform: scale(1.05); /* Effet d'agrandissement */
+						opacity: 0.85;
+					  }
+				  
+					  .image-container:hover .overlay-text {
+						opacity: 0; /* Le texte disparaît au hover */
+					  }
+				  
+					  .image-container:hover .pink-overlay {
+						opacity: 0; /* La couche rose disparaît au hover */
+					  }
+					</style>
+				  </section>
+
+				<section id="two" class="wrapper alt style2" style="background:#ffcddf;">
+					<section class="spotlight" style="background:#ffcddf;">
+						<div class="image"><img src="images/lashes-set.png" alt="" style="width:65%;height:500px"/></div><div class="content">
+							
+							<h2 style="color:rgb(59, 59, 59);">Keep Your Lash Game Strong</h2>
+							<p style="color:rgb(114, 114, 114);">
+								Everything you need to know about lashes: cleaning, applying, and style inspo thoughtfully curated for you.</p>
+							
 						</div>
 					</section>
+				</section>
+				  
+				
+				
 
 					<section id="one" class="wrapper style1 special" style="background:#ffe4ef;">
 						<div class="inner" style="background:#ffe4ef;">

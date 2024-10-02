@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>CHECKOUT INFOS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+	</head>
+	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt" style="background:#ff95b5;">
+					<h1 style="color:white;"><a href="index.html">DREAM LASHES </a></h1>
+					
+					<nav id="nav">
+						<ul>
+							<li class="special">
+								<a href="#menu" class="menuToggle"><span>Menu</span></a>
+								<div id="menu">
+									<ul>
+									
+										<li><a href="index.html">Home</a></li>
+										<li><a href="products.html">All Products</a></li>
+										<li><a href="celebrities.html">As trusted by Celebrities<a></li>
+										<li><a href="howtowear.html">How To Wear</a></li>
+										<li><a href="review.html">reviews </a></li>
+										<li><a href="aboutus.html">About Us</a></li>
+										<li><a href="contactUs.html">Contact us</a></li>
+								
+								</ul>
+								<a href="#menu" class="close"></a></div>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+                <!-- Form Section for Checkout Information -->
+                <section id="checkout" class="wrapper style3 special" style="background:#ffe4ef; padding: 2em 0;">
+                    <div class="inner">
+                        <br>
+                        <br>
+                        <header class="major">
+                            <h2 style="color:rgb(59, 59, 59)">Checkout Information</h2>
+                            <p style="color:rgb(114, 114, 114)">Please fill in your details to complete your order<br> Your order will be confirmed via <span style="color: #ff95b5;">WhatsApp</span> or <span style="color: #ff95b5;">Instagram</span></p>
+                        </header>
+                        <form action="#" method="post" style="max-width: 600px; margin: 0 auto;">
+                            <div class="fields">
+                                <div class="field">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" name="first-name" id="first-name" placeholder="Enter your first name" required />
+                                </div>
+                                <div class="field">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" name="last-name" id="last-name" placeholder="Enter your last name" required />
+                                </div>
+                                <div class="field">
+                                    <label for="address">Address</label>
+                                    <input type="text" name="address" id="address" placeholder="Enter your address" required />
+                                </div>
+                                <div class="field">
+                                    <label for="whatsapp">WhatsApp Number</label>
+                                    <input type="tel" name="whatsapp" id="whatsapp" placeholder="Enter your WhatsApp number" required />
+                                </div>
+                                <div class="field">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" placeholder="Enter your email" required />
+                                </div>
+                                <div class="field">
+                                    <label for="instagram">Instagram (optional)</label>
+                                    <input type="text" name="instagram" id="instagram" placeholder="@yourinstagramhandle" />
+                                </div>
+                            </div>
+                            <br>
+                            <div><button type="button" class="button primary" style="background: #ff95b5;" onclick="downloadOrder()">Submit Order</button></div>
+                        </form>
+                    </div>
+                </section>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy;<a href="www.ayoubbouchama.xyz">Ayex</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script>
+                function downloadOrder() {
+                    // Récupérer les données du formulaire
+                    const firstName = document.getElementById('first-name').value;
+                    const lastName = document.getElementById('last-name').value;
+                    const address = document.getElementById('address').value;
+                    const whatsapp = document.getElementById('whatsapp').value;
+                    const email = document.getElementById('email').value;
+                    const instagram = document.getElementById('instagram').value;
+            
+                    // Récupérer les données du panier depuis localStorage
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+                    // Créer le contenu du fichier texte
+                    let orderData = `First Name: ${firstName}\nLast Name: ${lastName}\nAddress: ${address}\nWhatsApp Number: ${whatsapp}\nEmail: ${email}\nInstagram: ${instagram}\n\nOrder Details:\n`;
+            
+                    if (cart.length > 0) {
+                        cart.forEach(product => {
+                            orderData += `${product.name} - Quantity: ${product.quantity} - Total Price: ${product.totalPrice} DH\n`;
+                        });
+                    } else {
+                        orderData += "No items in cart.";
+                    }
+            
+                    // Créer un blob avec les données
+                    const blob = new Blob([orderData], { type: 'text/plain' });
+                    const url = URL.createObjectURL(blob);
+            
+                    // Créer un lien pour télécharger le fichier
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'order.txt'; // Nom du fichier
+                    document.body.appendChild(a);
+                    a.click(); // Simuler un clic pour télécharger
+                    document.body.removeChild(a); // Nettoyer
+            
+                    // Révoquer l'URL pour libérer la mémoire
+                    URL.revokeObjectURL(url);
+                }
+            </script>            
+            
+
+
+		<!-- Styles -->
+		  <!-- Styles du header -->
+		  <style>
+			#header.alt h1 {
+				pointer-events: none;
+				opacity: 1;
+			}
+		  </style>
+
+          <style>
+            /* Form section styling */
+            #checkout {
+                padding: 2em;
+                background-color: #ffe4ef;
+                border-radius: 15px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            }
+        
+            #checkout h2 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                margin-bottom: 1em;
+            }
+        
+            #checkout p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.1em;
+                margin-bottom: 1.5em;
+                color: #727272;
+            }
+        
+            .fields {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5em;
+            }
+        
+            .field {
+                display: flex;
+                flex-direction: column;
+            }
+        
+            .field label {
+                font-family: 'Poppins', sans-serif;
+                font-size: 0.8em;
+                font-weight: 500;
+                color: #ff95b5;
+                margin-bottom: 0.5em;
+                background-color: #ff95b5;
+                border-radius: 8px;
+            }
+        
+            .field input {
+                padding: 0.75em;
+                border: 2px solid #ff95b5;
+                border-radius: 8px;
+                font-size: 0.7em;
+                color: rgb(80, 80, 80); /* Text color set to black */
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+        
+            .field input::placeholder {
+                color: rgb(80, 80, 80); /* Text color set to black */
+            }
+        
+            .field input:focus {
+                border-color: #ff95b5;
+            }
+        
+            /* Button styling */
+            .actions.special input[type="submit"] {
+                background: #ff95b5;
+                color: white;
+                padding: 0.75em 2em;
+                border-radius: 8px;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.1em;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            .actions.special input[type="submit"]:hover {
+                background: #ff4c7e;
+            }
+        
+            /* Mobile responsiveness */
+            @media (max-width: 768px) {
+                .fields {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>        
+        
+	</body>
+</html>

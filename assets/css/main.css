@@ -4080,12 +4080,45 @@ input, select, textarea {
     padding: 1em; /* Adjusted padding */
 }
 
-.carousel-item .price {
-    font-size: 1.2em; /* Slightly larger font size for price */
-    color: #ff95b5;
+/* Price styling */
+.carousel-item .content .price {
+    font-size: 1.4em; /* Larger font size for price */
     margin: 0.5em 0;
-    font-weight: bold; /* Emphasize price */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.05em; /* Espacement subtil entre les lettres */
 }
+
+/* Old price with elegant line-through */
+.carousel-item .content .old-price {
+    text-decoration: line-through;
+    text-decoration-thickness: 1px; /* Ligne plus fine pour une touche élégante */
+    text-decoration-color: #d3d3d3; /* Couleur de la ligne plus subtile */
+    color: #a0a0a0; /* Gris léger pour le texte de l'ancien prix */
+    margin-right: 1em;
+    font-size: 1em; /* Légèrement plus petit pour l'ancien prix */
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+/* New price styling */
+.carousel-item .content .new-price {
+    color: #ff95b5; /* Rose pastel pour le nouveau prix */
+    font-size: 1.6em; /* Prix plus grand pour le rendre plus visible */
+    font-weight: 700; /* Gras pour accentuer */
+    transition: color 0.3s ease;
+}
+
+/* Hover effects */
+.carousel-item:hover .old-price {
+    color: #888; /* Gris plus foncé au survol */
+    text-decoration-color: #ff95b5; /* Changement de couleur de la ligne de traversée sur hover */
+}
+
+.carousel-item:hover .new-price {
+    color: #ff4c7e; /* Rouge plus vif au survol pour attirer l'attention */
+}
+
 
 .carousel-item .reviews {
     display: flex;
@@ -4115,6 +4148,31 @@ input, select, textarea {
     display: block;
     text-align: center;
 }
+
+/* Badge for promotion */
+.carousel-item .badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: linear-gradient(135deg, #ff95b5, #ff4c7e); /* Dégradé du rose pastel vers un rose plus profond */
+    color: white;
+    padding: 0.2em 0.5em;
+    font-size: 0.7em;
+    font-weight: 600;
+    border-radius: 12px; /* Bords plus arrondis pour un look plus doux */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Ombre douce pour l'effet de profondeur */
+    text-transform: uppercase; /* Lettrage moderne en majuscule */
+    letter-spacing: 0.05em; /* Espace entre les lettres pour un effet de luxe */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect to enhance the badge */
+.carousel-item .badge:hover {
+    transform: scale(1.03); /* Légère mise en valeur au survol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+	opacity: 0.8;
+}
+
 
 
 /* Lashes Style */

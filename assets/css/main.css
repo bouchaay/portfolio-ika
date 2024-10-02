@@ -27,7 +27,6 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	font-family: 'Gabriola', fantasy;
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
@@ -4103,13 +4102,13 @@ input, select, textarea {
     text-decoration-color: #d3d3d3; /* More subtle line color */
     color: #a0a0a0; /* Light grey for the old price text */
     margin-bottom: 0.5em; /* Space between old and new prices */
-    font-size: 1em; /* Slightly smaller for the old price */
+    font-size: 0.75em; /* Slightly smaller for the old price */
 }
 
 /* New price styling */
 .carousel-item .content .new-price {
     color: #141414; /* Black color for the new price */
-    font-size: 1.6em; /* Larger price to make it more visible */
+    font-size: 1em; /* Larger price to make it more visible */
     font-weight: 700; /* Bold to emphasize */
 }
 
@@ -4349,7 +4348,6 @@ input, select, textarea {
 .carousel-4-item {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 items in a row */
-    gap: 0.1em; /* Space between items */
     margin-bottom: 2em; /* Space between rows */
 }
 

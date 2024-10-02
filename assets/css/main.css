@@ -4085,28 +4085,27 @@ input, select, textarea {
     font-size: 1.4em; /* Larger font size for price */
     margin: 0.5em 0;
     display: flex;
+    flex-direction: column; /* Align prices vertically */
     justify-content: center;
     align-items: center;
-    letter-spacing: 0.05em; /* Espacement subtil entre les lettres */
+    letter-spacing: 0.05em; /* Subtle spacing between letters */
 }
 
 /* Old price with elegant line-through */
 .carousel-item .content .old-price {
     text-decoration: line-through;
-    text-decoration-thickness: 1px; /* Ligne plus fine pour une touche élégante */
-    text-decoration-color: #d3d3d3; /* Couleur de la ligne plus subtile */
-    color: #a0a0a0; /* Gris léger pour le texte de l'ancien prix */
-    margin-right: 1em;
-    font-size: 1em; /* Légèrement plus petit pour l'ancien prix */
-    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    text-decoration-thickness: 1px; /* Fine line for an elegant touch */
+    text-decoration-color: #d3d3d3; /* More subtle line color */
+    color: #a0a0a0; /* Light grey for the old price text */
+    margin-bottom: 0.5em; /* Space between old and new prices */
+    font-size: 1em; /* Slightly smaller for the old price */
 }
 
 /* New price styling */
 .carousel-item .content .new-price {
-    color: #ff95b5; /* Rose pastel pour le nouveau prix */
-    font-size: 1.6em; /* Prix plus grand pour le rendre plus visible */
-    font-weight: 700; /* Gras pour accentuer */
-    transition: color 0.3s ease;
+    color: #141414; /* Black color for the new price */
+    font-size: 1.6em; /* Larger price to make it more visible */
+    font-weight: 700; /* Bold to emphasize */
 }
 
 /* Hover effects */
@@ -4116,8 +4115,9 @@ input, select, textarea {
 }
 
 .carousel-item:hover .new-price {
-    color: #ff4c7e; /* Rouge plus vif au survol pour attirer l'attention */
+    color: #000; /* Keep new price black on hover */
 }
+
 
 
 .carousel-item .reviews {
@@ -4344,7 +4344,7 @@ input, select, textarea {
 .carousel-4-item {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 items in a row */
-    gap: 1em; /* Space between items */
+    gap: 0.1em; /* Space between items */
     margin-bottom: 2em; /* Space between rows */
 }
 

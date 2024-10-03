@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+	<link href="https://fonts.cdnfonts.com/css/pristina" rel="stylesheet">
+
 
 </head>
 
@@ -21,7 +23,8 @@
 
 		<!-- Header -->
 		<header id="header" class="alt" style="background:#ff95b5;">
-			<h1 style="color:white;"><a href="index.html">DREAM LASHES </a></h1>
+			<h1 style="color:white;"><a href="index.html"><img src="images/dl-logo-header.png" alt="Lash Image 1"
+						style="width: 9%; margin: auto; padding: 7.5px; padding-left: 0px;"></a></h1>
 
 			<nav id="nav">
 				<ul>
@@ -64,15 +67,23 @@
 
 			<div class="inner" style="display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5em;">
 				<!-- Image Section -->
-				<div class="image-container" style="position: relative;">
+				<div class="image-container" style="position: relative; overflow: hidden;">
 					<img src="images/about-us.jpg" alt="Lash Image 1"
 						style="width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
 				</div>
 
+				<style>
+					.image-container:hover img {
+						transform: scale(1.1) translateY(-10px);
+						/* Zoom et déplacement léger */
+					}
+				</style>
+
+
 				<!-- Texte de l'histoire -->
 				<div class="text-container">
 					<h2 class="reviews-title" id="htw"
-						style="color: #ff95b5; font-size: 1.4em; font-family: 'Montserrat', sans-serif; text-align: left; margin-bottom: 1.5em; letter-spacing: 0.05em; text-transform: uppercase;">
+						style="color: #ff95b5; font-size: 1.7em; font-family: 'Pristina', sans-serif; text-align: left; margin-bottom: 1.5em; letter-spacing: 0.05em; text-transform: uppercase;">
 						IT ALL STARTED WITH A DREAM
 					</h2>
 					<p

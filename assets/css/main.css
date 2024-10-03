@@ -4421,7 +4421,7 @@ input, select, textarea {
     flex-direction: column;
     gap: 0px;
     justify-content: center;
-    padding: 50px;
+    padding: 0px;
 }
 
 /* Container for each artist */

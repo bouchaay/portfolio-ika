@@ -4060,7 +4060,7 @@ input, select, textarea {
 .carousel-item {
     background: #fff; /* White background for items */
     border-radius: 12px; /* Rounded corners */
-    margin: 0 0.5em; /* Margin between items */
+    margin: 0 0.3em; /* Margin between items */
     flex: 0 0 calc(100% / 4 - 1em); /* Adjust to fit 4 items */
     text-align: center;
     box-sizing: border-box;
@@ -4108,8 +4108,8 @@ input, select, textarea {
 /* New price styling */
 .carousel-item .content .new-price {
     color: #141414; /* Black color for the new price */
-    font-size: 1em; /* Larger price to make it more visible */
-    font-weight: 700; /* Bold to emphasize */
+    font-size: 0.85em; /* Larger price to make it more visible */
+    font-weight: 650; /* Bold to emphasize */
 }
 
 /* Hover effects */
@@ -4129,15 +4129,17 @@ input, select, textarea {
     flex-direction: column;
     align-items: center;
     margin-bottom: 1em; /* Margin before button */
+	padding: 0.5em;
+	padding-bottom: 0;
 }
 
 .carousel-item .stars {
     color: #ebc700;
-    margin-bottom: 0.5em;
+    /*margin-bottom: 0.5em;*/
 }
 
 .carousel-item .review-count {
-    font-size: 0.9em; /* Slightly larger font size for review count */
+    font-size: 0.6em; /* Slightly larger font size for review count */
     color: #666;
 }
 
@@ -4417,9 +4419,9 @@ input, select, textarea {
 .image-gallery-celebrities {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0px;
     justify-content: center;
-    padding: 20px;
+    padding: 50px;
 }
 
 /* Container for each artist */
@@ -4443,11 +4445,11 @@ input, select, textarea {
     object-fit: cover; /* Assure que l'image garde son ratio */
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .image-item-celebrities img:hover {
-    transform: scale(1.05); /* Effet de zoom au survol */
+    transform: scale(1.03); /* Effet de zoom au survol */
 }
 
 /* Celebrity Name Styling */
@@ -4455,7 +4457,7 @@ input, select, textarea {
     margin-top: 50px;
     font-size: 2.5em;
     font-weight: bold;
-    color: #ff4081;
+    color: #ff95b5;
     text-transform: uppercase;
 }
 

@@ -21,7 +21,8 @@
 
         <!-- Header -->
         <header id="header" class="alt" style="background:#ff95b5;">
-            <h1 style="color:white;"><a href="index.html"><img src="images/dl-logo-header.png" alt="Lash Image 1" style="width: 9%; margin: auto; padding: 7.5px; padding-left: 0px;"></a></h1>
+            <h1 style="color:white;"><a href="index.html"><img src="images/dl-logo-header.png" alt="Lash Image 1"
+                        style="width: 9%; margin: auto; padding: 7.5px; padding-left: 0px;"></a></h1>
 
             <nav id="nav">
                 <ul>
@@ -142,26 +143,28 @@
             const whatsapp = document.getElementById('whatsapp').value;
             const email = document.getElementById('email').value;
             const instagram = document.getElementById('instagram').value;
-    
+
             // Vérifier que tous les champs requis sont remplis
             if (!firstName || !lastName || !address || !whatsapp || !email) {
                 alert("Veuillez remplir tous les champs obligatoires.");
                 return; // Arrêter l'exécution si des champs obligatoires sont vides
             }
-    
+
             // Récupérer les données du panier depuis localStorage
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
+
             // Formater les données du panier
             let orderDetails = "";
             if (cart.length > 0) {
                 cart.forEach(product => {
-                    orderDetails += `${product.name} - Quantity: ${product.quantity} - Total Price: ${product.totalPrice} DH\n`;
+                    // Assurez-vous que le total est calculé correctement
+                    const totalPrice = (product.price * product.quantity).toFixed(2);
+                    orderDetails += `${product.name} - Quantity: ${product.quantity} - Total Price: ${totalPrice} DH\n`;
                 });
             } else {
                 orderDetails += "No items in cart.";
             }
-    
+
             // Créer les données à envoyer
             const formData = {
                 'First Name': firstName,
@@ -172,7 +175,7 @@
                 'Instagram': instagram || 'N/A',
                 'Order Details': orderDetails
             };
-    
+
             // Envoyer les données via Formspree
             fetch("https://formspree.io/f/mnnaekak", {
                 method: "POST",
@@ -185,13 +188,13 @@
                 if (response.ok) {
                     // Afficher un message de succès
                     alert("Order submitted successfully!");
-    
+
                     // Générer et télécharger le fichier texte de l'ordre
                     downloadOrder(formData);
-    
+
                     // Rediriger vers la page de remerciement
                     window.location.href = "thanks-for-the-purshase.html";
-    
+
                 } else {
                     alert("There was an issue submitting your order. Please try again.");
                 }
@@ -200,15 +203,15 @@
                 alert("There was an error submitting your order.");
             });
         }
-    
+
         function downloadOrder(formData) {
             // Créer le contenu du fichier texte
             let orderData = `First Name: ${formData['First Name']}\nLast Name: ${formData['Last Name']}\nAddress: ${formData['Address']}\nWhatsApp Number: ${formData['WhatsApp Number']}\nEmail: ${formData['Email']}\nInstagram: ${formData['Instagram']}\n\nOrder Details:\n${formData['Order Details']}`;
-    
+
             // Créer un blob avec les données
             const blob = new Blob([orderData], { type: 'text/plain' });
             const url = URL.createObjectURL(blob);
-    
+
             // Créer un lien pour télécharger le fichier
             const a = document.createElement('a');
             a.href = url;
@@ -216,12 +219,13 @@
             document.body.appendChild(a);
             a.click(); // Simuler un clic pour télécharger
             document.body.removeChild(a); // Nettoyer
-    
+
             // Révoquer l'URL pour libérer la mémoire
             URL.revokeObjectURL(url);
         }
     </script>
-    
+
+
 
 
 

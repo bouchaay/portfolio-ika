@@ -52,22 +52,59 @@
 		</header>
 
 		<!-- Banner -->
-		<section id="banner">
-			<div class="inner">
-				<h2 style="color:rgb(0, 0, 0);""><img src=" images/logo-ddl.png" alt="Lash Image 1"
-					style="width: 65%; margin: auto;"></h2>
-				<!--<p style="color: #ffffff; font-family: 'Golden Hopes', sans-serif; font-size: 2em; font-weight: bold; letter-spacing: 0.05em; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); text-align: center;">
-								Pamper your eyes<br/>
-							</p>-->
-				<p> <img src="images/pamper-your-eyes.png" alt="Lash Image 1" style="width: 25%; margin: auto;"> </p>
-
+		<section id="banner" class="video-background">
+			<video autoplay muted loop id="background-video">
+				<source src="images/video.mp4" type="video/mp4">
+				Votre navigateur ne prend pas en charge la vidéo.
+			</video>
+			<div class="inner" id="inner-banner">
+				<h2 style="color:rgb(0, 0, 0);">
+					<img src="images/logo-ddl.png" alt="Lash Image 1" style="width: 65%; margin: auto;">
+				</h2>
+				<p>
+					<img src="images/pamper-your-eyes.png" alt="Lash Image 1" style="width: 55%; margin: auto;">
 				</p>
 				<ul class="actions special">
 					<li><a href="products.html" class="button primary" style="background: #ff95b5;">EXPLORE</a></li>
 				</ul>
 			</div>
-			<a href="#one" class="more scrolly"></a>
 		</section>
+
+		<style>
+			.video-background {
+				position: relative;
+				overflow: hidden;
+				height: 100vh; /* Ajustez la hauteur selon vos besoins */
+			}
+			
+			#background-video {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				z-index: 0; /* La vidéo est en dessous du contenu */
+				transform: translate(-50%, -50%);
+			}
+			
+			#inner-banner {
+				position: absolute; /* Positionnez le contenu relativement à .video-background */
+				top: 50%; /* Centrer verticalement */
+				left: 50%; /* Centrer horizontalement */
+				transform: translate(-50%, -50%); /* Ajuster la position pour centrer */
+				text-align: center; /* Centrer le texte */
+				z-index: 1; /* Assurez-vous que le contenu est au-dessus de la vidéo */
+				background: rgba(255, 255, 255, 0); /* Fond blanc semi-transparent */
+				padding: 20px; /* Ajoute un peu d'espace autour du contenu */
+				border-radius: 10px; /* Arrondir les coins du fond */
+			}
+			
+			
+		</style>
+
+
 
 		<!-- One -->
 		<section id="one" class="wrapper style1 special" style="background:#ffe4ef;">
@@ -75,7 +112,7 @@
 				<header class="major">
 					<h2 style="color:rgb(59, 59, 59)">MAKE YOUR
 						OWN MOMENTUM.</h2>
-					<p style="color:rgb(114, 114, 114)">At Ika Lashes, we believe that beauty starts with the perfect
+					<p style="color:rgb(114, 114, 114);">At Ika Lashes, we believe that beauty starts with the perfect
 						lashes. Our founder envisioned this space as a place where individuals can express their unique
 						style and confidence. Every lash we offer is crafted to highlight your individuality, bringing
 						out the best version of yourself. We are passionate about creating a community where everyone

@@ -21,24 +21,37 @@
 
 		<!-- Header -->
 		<header id="header" class="alt" style="background:#ff95b5;">
-			<h1 style="color:white;"><a href="index.html"><img src="images/dl-logo-header.png" alt="Lash Image 1"
-						style="width: 9%; margin: auto; padding: 7.5px; padding-left: 0px;"></a></h1>
+			<h1 style="color:white;">
+				<a href="index.html">
+					<img src="images/dl-logo-header.png" alt="Lash Image 1"
+						style="width: 9%; margin: auto; padding: 7.5px; padding-left: 0px;">
+				</a>
+			</h1>
 
-			<nav id="nav">
-				<ul>
-					<li class="special">
+			<nav id="nav" style="display: flex; align-items: center; justify-content: flex-end; padding: 10px;">
+				<ul style="display: flex; align-items: center; list-style: none; margin: 0; padding: 0;">
+					<li style="margin-right: 20px; position: relative;">
+						<!-- Icône de panier dans le header -->
+						
+						<a href="cart.html" class="cart-icon" title="View Cart"
+							style="display: flex; align-items: center; text-decoration: none; color: white;">
+							<i class="fas fa-shopping-cart" style="font-size: 1.5em; color: white;"></i>
+							<span id="cart-count">
+								Check your cart
+							</span>
+						</a>
+					</li>
+					<li class="special" style="position: relative;">
 						<a href="#menu" class="menuToggle"><span>Menu</span></a>
 						<div id="menu">
 							<ul>
-
 								<li><a href="index.html">Home</a></li>
 								<li><a href="products.html">All Products</a></li>
-								<li><a href="celebrities.html">As trusted by Celebrities<a></li>
+								<li><a href="celebrities.html">As trusted by Celebrities</a></li>
 								<li><a href="howtowear.html">How To Wear</a></li>
-								<li><a href="review.html">reviews </a></li>
+								<li><a href="review.html">Reviews</a></li>
 								<li><a href="aboutus.html">About Us</a></li>
 								<li><a href="contactUs.html">Contact us</a></li>
-
 							</ul>
 							<a href="#menu" class="close"></a>
 						</div>
@@ -46,6 +59,37 @@
 				</ul>
 			</nav>
 		</header>
+
+		<style>
+			/* Icône de panier */
+			#header .cart-icon {
+				padding-left: 10px;
+				text-decoration: none;
+				color: white;
+			}
+
+			#header .cart-icon:hover {
+				color: #ff005d;
+				/* Couleur au survol */
+				transition: color 0.3s ease;
+			}
+
+			/* Style du compteur d'articles */
+			#cart-count {
+				color: white;
+				/* Couleur du texte */
+				padding: 20px 6px;
+				/* Arrondir les bords */
+				font-size: 0.7em;
+				/* Taille de police */
+				position: absolute;
+				/* Positionnement absolu */
+				top: -37px;
+				/* Position en haut */
+				right: 55px;
+				/* Position à droite */
+			}
+		</style>
 
 		<style>
 			#header.alt h1 {
@@ -72,7 +116,7 @@
 										<a href="kylie.html">
 											<img src="images/faux-cils/KYLIE.png" alt="Product 1" class="default-image">
 											<img src="images/kylie-3.jpg" alt="Product 1 hover" class="hover-image" />
-											
+
 										</a>
 									</div>
 									<div class="content">
@@ -84,8 +128,7 @@
 											<span class="new-price">110 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="kylie" onclick="addToCart('Kylie', 110)">Add to
-											card</a>
+										<a href="kylie.html" class="view-more-btn">Buy Now</a>
 									</div>
 								</article>
 								<!-- Product 2 -->
@@ -106,8 +149,7 @@
 											<span class="new-price">110 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="casablanca"
-											onclick="addToCart('Casablanca', 110)">add to card</a>
+										<a href="casa.html" class="view-more-btn">Buy Now</a>
 									</div>
 								</article>
 								<!-- Product 3 -->
@@ -127,8 +169,7 @@
 											<span class="new-price">110 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="rita" onclick="addToCart('Rita', 110)">add to
-											card</a>
+										<a href="rita.html" class="view-more-btn">View More</a>
 									</div>
 								</article>
 								<!-- Product 4 -->
@@ -148,8 +189,7 @@
 											<span class="new-price">110 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="ika" onclick="addToCart('Ika', 110)">add to
-											card</a>
+										<a href="ika.html" class="view-more-btn">Buy Now</a>
 									</div>
 								</article>
 							</div>
@@ -161,7 +201,8 @@
 										<a href="barbie.html">
 											<img src="images/faux-cils/BARBIE.png" alt="Product 1"
 												class="default-image">
-											<img src="images/barbie-2.jpg" alt="Product 1 hover" class="hover-image" />
+											<img src="images/barbie-5 (1).jpg" alt="Product 1 hover"
+												class="hover-image" />
 										</a>
 									</div>
 									<div class="content">
@@ -173,8 +214,7 @@
 											<span class="new-price">110 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="barbie" onclick="addToCart('Barbie', 110)">add to
-											card</a>
+										<a href="barbie.html" class="view-more-btn">Buy Now</a>
 									</div>
 								</article>
 								<!-- Product 6 -->
@@ -196,8 +236,7 @@
 											<span class="new-price">110 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="glamour" onclick="addToCart('Glamour', 110)">add
-											to card</a>
+										<a href="glamour.html" class="view-more-btn">Buy Now</a>
 									</div>
 								</article>
 								<!-- Product 7 -->
@@ -219,8 +258,7 @@
 											<span class="new-price">110 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="love" onclick="addToCart('Love', 110)">add to
-											card</a>
+										<a href="love.html" class="view-more-btn">Buy More</a>
 									</div>
 								</article>
 								<!-- Product 8 -->
@@ -242,9 +280,8 @@
 											<span class="new-price">80 DH</span>
 										</p>
 										<br>
+										<a href="meta1.html" class="view-more-btn">Buy Now</a>
 
-										<a class="button primary" id="meta1" onclick="addToCart('Meta 1', 80)">add to
-											card</a>
 									</div>
 								</article>
 							</div>
@@ -269,8 +306,7 @@
 											<span class="new-price">80 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="meta2" onclick="addToCart('Meta 2', 80)">add to
-											card</a>
+										<a href="meta2.html" class="view-more-btn">Buy Now</a>
 									</div>
 								</article>
 								<!-- Product 10 -->
@@ -292,8 +328,7 @@
 											<span class="new-price">80 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="meta3" onclick="addToCart('Meta 3', 80)">add to
-											card</a>
+										<a href="meta3.html" class="view-more-btn">Buy Now</a>
 									</div>
 								</article>
 								<!-- Product 11 -->
@@ -302,7 +337,8 @@
 										<a href="moscow.html">
 											<img src="images/faux-cils/MOSCOW.png" alt="Product 3"
 												class="default-image">
-											<img src="images/moscow-5 (1).jpg" alt="Product 1 hover" class="hover-image" />
+											<img src="images/moscow-5 (1).jpg" alt="Product 1 hover"
+												class="hover-image" />
 										</a>
 									</div>
 
@@ -315,8 +351,7 @@
 											<span class="new-price">110 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="moscow" onclick="addToCart('Moscow', 110)">add to
-											card</a>
+										<a href="moscow.html" class="view-more-btn">Buy Now</a>
 									</div>
 								</article>
 								<!-- Product 12 -->
@@ -324,7 +359,8 @@
 									<div class="image">
 										<a href="tima.html">
 											<img src="images/faux-cils/TIMA.png" alt="Product 4" class="default-image">
-											<img src="images/tima-4 (1).jpg" alt="Product 1 hover" class="hover-image" />
+											<img src="images/tima-4 (1).jpg" alt="Product 1 hover"
+												class="hover-image" />
 										</a>
 									</div>
 									<div class="content">
@@ -336,8 +372,7 @@
 											<span class="new-price">110 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="tima" onclick="addToCart('Tima', 110)">add to
-											card</a>
+										<a href="tima.html" class="view-more-btn">Buy Now</a>
 									</div>
 								</article>
 							</div>
@@ -348,8 +383,9 @@
 									<div class="image">
 										<a href="honey.html">
 											<img src="images/honey-1 (1).jpg" alt="Product 4" class="default-image">
-											<img src="images/honey-2 (1).jpg" alt="Product 1 hover" class="hover-image" />
-											
+											<img src="images/honey-2 (1).jpg" alt="Product 1 hover"
+												class="hover-image" />
+
 										</a>
 									</div>
 									<div class="content">
@@ -361,8 +397,7 @@
 											<span class="new-price">110 DH</span>
 										</p>
 										<br>
-										<a class="button primary" id="honey" onclick="addToCart('Honey', 110)">add to
-											card</a>
+										<a href="honey.html" class="view-more-btn">Buy Now</a>
 									</div>
 								</article>
 								<!-- Product 14 -->
@@ -382,7 +417,7 @@
 											<span class="new-price">0 DH</span>
 										</p>
 										<br>
-										<a class="button primary">add to card</a>
+
 									</div>
 								</article>
 								<!-- Product 15 -->
@@ -402,7 +437,7 @@
 											<span class="new-price">0 DH</span>
 										</p>
 										<br>
-										<a class="button primary">add to card</a>
+
 									</div>
 								</article>
 								<!-- Product 16 -->
@@ -422,7 +457,7 @@
 											<span class="new-price">0 DH</span>
 										</p>
 										<br>
-										<a class="button primary">add to card</a>
+
 									</div>
 								</article>
 							</div>
@@ -532,93 +567,6 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
-
-	<script>
-		// Array pour stocker les produits ajoutés au panier
-		let cart = [];
-
-		// Fonction pour ajouter un produit au panier
-		function addToCart(productName, unitPrice) {
-			// Vérifier si le produit est déjà dans le panier
-			let existingProduct = cart.find(product => product.name === productName);
-
-			if (existingProduct) {
-				// Augmenter la quantité si le produit existe déjà
-				existingProduct.quantity += 1;
-				existingProduct.totalPrice = existingProduct.quantity * unitPrice;
-			} else {
-				// Ajouter un nouveau produit au panier
-				cart.push({
-					name: productName,
-					unitPrice: unitPrice,
-					quantity: 1,
-					totalPrice: unitPrice
-				});
-			}
-
-			// Mettre à jour l'affichage du tableau du panier
-			updateCartDisplay();
-		}
-
-		// Fonction pour mettre à jour le tableau du panier
-		function updateCartDisplay() {
-			const cartBody = document.getElementById('cart-body');
-			const cartTotal = document.getElementById('cart-total');
-			let totalPrice = 0;
-
-			// Effacer le contenu actuel
-			cartBody.innerHTML = '';
-
-			// Ajouter chaque produit dans le tableau
-			cart.forEach(product => {
-				const row = document.createElement('tr');
-
-				row.innerHTML = `
-							<td style="color:rgb(114, 114, 114);">${product.name}</td>
-							<td style="color:rgb(114, 114, 114);">${product.unitPrice} DH</td>
-							<td style="color:rgb(114, 114, 114);">${product.quantity}</td>
-							<td style="color:rgb(114, 114, 114);">${product.totalPrice} DH</td>
-						`;
-
-				cartBody.appendChild(row);
-				totalPrice += product.totalPrice;
-			});
-
-			// Mettre à jour le total général du panier
-			cartTotal.innerHTML = `<strong style="color:rgb(114, 114, 114);">${totalPrice} DH</strong>`;
-		}
-
-		// Fonction pour configurer les boutons "Ajouter au panier"
-		function setupAddToCartButtons() {
-			document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-				button.addEventListener('click', () => {
-					const productName = button.dataset.productName;
-					const unitPrice = parseFloat(button.dataset.productPrice);
-					addToCart(productName, unitPrice);
-				});
-			});
-		}
-
-		// Appeler cette fonction lorsque la page est chargée
-		document.addEventListener('DOMContentLoaded', setupAddToCartButtons);
-
-		// Fonction pour procéder au paiement
-		function proceedToCheckout() {
-			// Vérifier s'il y a des produits dans le panier
-			if (cart.length === 0) {
-				alert('Votre panier est vide. Ajoutez des produits avant de procéder au paiement.');
-				return;
-			}
-
-			// Stocker le panier dans localStorage
-			localStorage.setItem('cart', JSON.stringify(cart));
-
-			// Rediriger vers la page de checkout
-			window.location.href = 'checkout.html';
-		}
-	</script>
-
 
 	<style>
 		.carousel-item {
@@ -744,14 +692,35 @@
 		}
 	</style>
 
+	<style>
+		.view-more-btn {
+			display: inline-block;
+			background-color: #FF95B5;
+			/* Couleur de fond rose pour correspondre au design féminin */
+			color: white;
+			/* Couleur du texte */
+			padding: 3px 20px;
+			font-family: 'New Century Schoolbook', 'TeX Gyre Schola', serif;
+			/* Espacement pour créer un bouton plus large */
+			text-decoration: none;
+			/* Supprime la ligne soulignée du lien */
+			font-size: 0.75em;
+			/* Taille de police adaptée */
+			border-radius: 5px;
+			/* Bords arrondis pour un look moderne et doux */
+			transition: background-color 0.3s ease;
+			/* Animation de changement de couleur */
+		}
 
-
-
-
-
-
-
-
+		.view-more-btn:hover {
+			background-color: #FFCDDF;
+			/* Couleur légèrement plus claire au survol */
+			color: white;
+			/* Conserve la couleur blanche du texte */
+			cursor: pointer;
+			/* Curseur en forme de main au survol */
+		}
+	</style>
 
 </body>
 

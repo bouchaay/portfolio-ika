@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>PRODUCTS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body class="landing is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt" style="background:#ff95b5;">
+            <h1 style="color:white;">
+                <a href="index.html"><img src="images/dl-logo-header.png" alt="Lash Image 1"
+                        style="width: 9%; margin: auto; padding: 7.5px; padding-left: 0px;"></a>
+            </h1>
+
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="products.html">All Products</a></li>
+                                <li><a href="celebrities.html">As trusted by Celebrities<a></li>
+                                <li><a href="howtowear.html">How To Wear</a></li>
+                                <li><a href="review.html">Reviews</a></li>
+                                <li><a href="aboutus.html">About Us</a></li>
+                                <li><a href="contactUs.html">Contact us</a></li>
+                            </ul>
+                            <a href="#menu" class="close"></a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <style>
+            #header.alt h1 {
+                pointer-events: none;
+                opacity: 1;
+            }
+        </style>
+
+        <!-- Cart Section -->
+        <section id="cart-section" class="wrapper style3 special" style="background:#FDFBF9;">
+            <br class="inner">
+            <header class="major">
+                <h2 style="color:rgb(59, 59, 59)">Your Cart</h2>
+                <p style="color:rgb(114, 114, 114)">Review your selected items before checkout</p>
+            </header>
+
+            <!-- Conteneur des éléments du panier -->
+            <div id="cart-items-container">
+                <!-- Résumé du tableau de commande -->
+                <table id="cart-table" border="1" cellpadding="10" cellspacing="0"
+                    style="width:100%; margin-bottom: 20px;">
+                    <thead>
+                        <tr>
+                            <th style="color:rgb(114, 114, 114);padding:0 2em; font-size: 0.7em;">Produit</th>
+                            <th style="color:rgb(114, 114, 114); font-size: 0.7em;">Prix Unitaire</th>
+                            <th style="color:rgb(114, 114, 114); font-size: 0.7em;">Quantité</th>
+                            <th style="color:rgb(114, 114, 114); font-size: 0.7em;">Prix Total</th>
+                            <th style="color:rgb(114, 114, 114); font-size: 0.7em;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-body">
+                        <!-- Les produits seront ajoutés ici dynamiquement -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" style="text-align:right;"><strong
+                                    style="color:rgb(114, 114, 114); font-size: 0.7em;">Total :</strong></td>
+                            <td id="cart-total"><strong style="color:rgb(114, 114, 114); font-size: 0.7em;">0
+                                    DH</strong></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <br>
+            <!-- Bouton pour procéder au paiement -->
+            <a class="button primary" onclick="proceedToCheckout()">Proceed to Checkout</a>
+        </section>
+
+        <section id="one" class="wrapper style1 special" style="background:#ffe4ef;">
+            <div class="inner">
+                <h2 class="major" style="color:rgb(59, 59, 59); font-size: 2.5em;">WHY US ?</h2>
+
+                <div class="image-about-us">
+                    <div class="image-item-abt-us">
+                        <img src="images/banner-dream-removebg-preview.png" alt="Lash Image 1"
+                            style="width: 40%; margin: auto;">
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li>
+                    <a href="https://wa.me/212640878240" class="icon brands fa-whatsapp" target="_blank">
+                        <span class="label">WhatsApp</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/dreamlashes_morocco" class="icon brands fa-instagram"
+                        target="_blank">
+                        <span class="label">dreamlashes_morocco</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:dreamlashess1@gmail.com" class="icon solid fa-envelope">
+                        <span class="label">dreamlashess1@gmail.com</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy;<a href="www.ayoubbouchama.xyz">Ayex</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Fonction pour charger les articles du panier
+        function loadCartItems() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartBody = document.getElementById('cart-body');
+            cartBody.innerHTML = ''; // Vider le corps du tableau
+
+            let total = 0;
+
+            // Parcourir les articles du panier et les afficher
+            cart.forEach((item, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td style="color:rgb(114, 114, 114); font-size: 0.7em;">${item.name}</td>
+                    <td style="color:rgb(114, 114, 114); font-size: 0.7em;">${item.price} DH</td>
+                    <td>
+                        <input type="number" id="quantity-${index}" value="${item.quantity}" min="1" onchange="updateQuantity(${index})" style="text-align: center; font-size: 0.7em; width: 70px; padding: 5px; color: rgb(114, 114, 114); border: 1px solid #ddd; border-radius: 5px; text-align: center; transition: all 0.3s ease;">
+                    </td>
+                    <td style="color:rgb(114, 114, 114); font-size: 0.7em;">${(item.price * item.quantity).toFixed(2)} DH</td>
+                    <td><button onclick="removeItem(${index})" style="background-color: #ff95b5; color: white; border: none; padding: 0px 10px; padding-left: 11px; font-size: 0.5em; border-radius: 5px; cursor: pointer;">x</button></td>
+                `;
+                cartBody.appendChild(row);
+                total += item.price * item.quantity;
+            });
+
+            // Afficher le total
+            document.getElementById('cart-total').innerHTML = `<strong style="color:rgb(114, 114, 114); font-size: 0.7em;">${total.toFixed(2)} DH</strong>`;
+        }
+
+        // Fonction pour mettre à jour la quantité
+        function updateQuantity(index) {
+            const quantity = parseInt(document.getElementById(`quantity-${index}`).value);
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (quantity > 0) {
+                cart[index].quantity = quantity;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                loadCartItems(); // Recharger les articles pour mettre à jour le total
+            }
+        }
+
+        // Fonction pour supprimer un article du panier
+        function removeItem(index) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1); // Retirer l'élément
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCartItems(); // Recharger les articles pour mettre à jour le tableau
+        }
+
+        // Fonction pour procéder au paiement
+        function proceedToCheckout() {
+            // Rediriger vers la page de checkout
+            window.location.href = "checkout.html";
+        }
+
+        // Charger les articles du panier lors du chargement de la page
+        window.onload = loadCartItems;
+
+    </script>
+
+
+
+</body>
+
+</html>

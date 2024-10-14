@@ -66,9 +66,9 @@
                             <img src="images/how-often-do-you-wear-lashes.png" alt="Question 1"
                                 style="width: 50%; margin: auto; display: block; margin-bottom: 1em;">
                             <div class="option-how-often">
-                                <button>Only for special events</button>
-                                <button>Multiple times a month</button>
-                                <button>Everyday</button>
+                                <button data-alt="Special">Only for special events</button>
+                                <button data-alt="Multiple">Multiple times a month</button>
+                                <button data-alt="Everyday">Everyday</button>
                             </div>
                         </div>
 
@@ -80,19 +80,19 @@
                                 style="display: flex; justify-content: space-between; gap: 10px;">
                                 <!-- Image 1 -->
                                 <div class="image-container">
-                                    <img src="images/Minimal2.png" alt="Minimal Look" class="quizImage"
+                                    <img src="images/Minimal2.png" alt="Minimal" class="quizImage"
                                         style="width: 65%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease; border-color: #ff95b5; border-style: solid; border-width: 1px;">
                                 </div>
 
                                 <!-- Image 2 -->
                                 <div class="image-container">
-                                    <img src="images/soft-glam2.png" alt="Soft Glam Look" class="quizImage"
+                                    <img src="images/soft-glam2.png" alt="SoftGlam" class="quizImage"
                                         style="width: 65%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease; border-color: #ff95b5; border-style: solid; border-width: 1px;">
                                 </div>
 
                                 <!-- Image 3 -->
                                 <div class="image-container">
-                                    <img src="images/full-glam2.png" alt="Full Glam Look" class="quizImage"
+                                    <img src="images/full-glam2.png" alt="FullGlam" class="quizImage"
                                         style="width: 65%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease; border-color: #ff95b5; border-style: solid; border-width: 1px;">
                                 </div>
                             </div>
@@ -106,25 +106,25 @@
                                 style="display: flex; justify-content: space-between; gap: 5px;">
                                 <!-- Image 1 -->
                                 <div class="image-container">
-                                    <img src="images/almond2.png" alt="Minimal Look" class="quizImage"
+                                    <img src="images/almond2.png" alt="Almond" class="quizImage"
                                         style="width: 85%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease; border-color: #ff95b5; border-style: solid; border-width: 1px;">
                                 </div>
 
                                 <!-- Image 2 -->
                                 <div class="image-container">
-                                    <img src="images/hooded2.png" alt="Soft Glam Look" class="quizImage"
+                                    <img src="images/hooded2.png" alt="Hooded" class="quizImage"
                                         style="width: 85%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease; border-color: #ff95b5; border-style: solid; border-width: 1px;">
                                 </div>
 
                                 <!-- Image 3 -->
                                 <div class="image-container">
-                                    <img src="images/upturned2.png" alt="Full Glam Look" class="quizImage"
+                                    <img src="images/upturned2.png" alt="Upturned" class="quizImage"
                                         style="width: 85%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease; border-color: #ff95b5; border-style: solid; border-width: 1px;">
                                 </div>
 
                                 <!-- Image 4 -->
                                 <div class="image-container">
-                                    <img src="images/Monolid2.png" alt="Full Glam Look" class="quizImage"
+                                    <img src="images/Monolid2.png" alt="Monolid" class="quizImage"
                                         style="width: 85%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease; border-color: #ff95b5; border-style: solid; border-width: 1px;">
                                 </div>
                             </div>
@@ -132,12 +132,27 @@
 
                         <!-- Submit Button -->
                         <div class="quiz-footer">
-                            <button>Submit</button>
+                            <button>Get Results</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="one" class="wrapper style1 special"
+			style="background:#ffdfeb; padding-top:0px; padding-bottom:0px;">
+			<div class="inner">
+				<!-- Image Section -->
+				<img src="images/Why us .png" alt="Lash Image 1" style="width: 45%; margin: auto;">
+
+				<div class="image-about-us">
+					<div class="image-item-abt-us">
+						<img src="images/Why-us-img.png" alt="Lash Image 1" style="width: 65%; margin: auto;">
+					</div>
+					<br>
+				</div>
+			</div>
+		</section>
 
         <!-- Footer -->
         <footer id="footer">
@@ -195,9 +210,65 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Custom JavaScript for Quiz -->
-    <script>
-        // Pour sélectionner des options sous forme d'images
+    <script> // Liste des produits fictifs (les produits réels devraient être récupérés d'une base de données ou API)
+        const products = [
+            { name: "Kylie", image: "images/faux-cils/KYLIE.png", newPrice: "110 DH", link: "kylie.html" },
+            { name: "Casablanca", image: "images/casa-2-products.jpg", newPrice: "110 DH", link: "casa.html" },
+            { name: "Rita", image: "images/faux-cils/RITA.png", newPrice: "110 DH", link: "rita.html" },
+            { name: "Ika", image: "images/faux-cils/IKA.png", newPrice: "110 DH", link: "ika.html" },
+            { name: "Barbie", image: "images/faux-cils/BARBIE.png", newPrice: "110 DH", link: "barbie.html" },
+            { name: "Glamour", image: "images/faux-cils/GLAMOUR.png", newPrice: "110 DH", link: "glamour.html" },
+            { name: "Love", image: "images/faux-cils/LOVE.png", newPrice: "110 DH", link: "love.html" },
+            { name: "Meta 1", image: "images/faux-cils/META1.png", newPrice: "80 DH", link: "meta1.html" },
+            { name: "Meta 2", image: "images/faux-cils/META2.png", newPrice: "80 DH", link: "meta2.html" },
+            { name: "Meta 3", image: "images/faux-cils/META3.png", newPrice: "80 DH", link: "meta3.html" },
+            { name: "Moscow", image: "images/faux-cils/MOSCOW.png", newPrice: "110 DH", link: "moscow.html" },
+            { name: "Tima", image: "images/faux-cils/TIMA.png", newPrice: "110 DH", link: "tima.html" },
+            { name: "Honey", image: "images/honey-1 (1).jpg", newPrice: "110 DH", link: "honey.html" }
+        ];
+
+        // Combinaisons de réponses
+        const combinations = {
+            /* Première combinaisons : Only for special events / multiple times a month —> minimal —> Almond / hooded / upturned / monolid —> LASHES : Honey , meta 1 , meta 2 , meta 3 */
+            "Special_Minimal_Almond": ["Honey", "Meta 1", "Meta 2", "Meta 3"],
+            "Special_Minimal_Hooded": ["Honey", "Meta 1", "Meta 2", "Meta 3"],
+            "Special_Minimal_Upturned": ["Honey", "Meta 1", "Meta 2", "Meta 3"],
+            "Special_Minimal_Monolid": ["Honey", "Meta 1", "Meta 2", "Meta 3"],
+            "Multiple_Minimal_Almond": ["Honey", "Meta 1", "Meta 2", "Meta 3"],
+            "Multiple_Minimal_Hooded": ["Honey", "Meta 1", "Meta 2", "Meta 3"],
+            "Multiple_Minimal_Upturned": ["Honey", "Meta 1", "Meta 2", "Meta 3"],
+            "Multiple_Minimal_Monolid": ["Honey", "Meta 1", "Meta 2", "Meta 3"],
+            "Special_SoftGlam_Almond": ["Kylie", "Moscow", "Glamour"],
+            "Special_SoftGlam_Hooded": ["Kylie", "Moscow", "Glamour"],
+            "Special_SoftGlam_Upturned": ["Kylie", "Moscow", "Glamour"],
+            "Multiple_SoftGlam_Almond": ["Kylie", "Moscow", "Glamour"],
+            "Multiple_SoftGlam_Hooded": ["Kylie", "Moscow", "Glamour"],
+            "Multiple_SoftGlam_Upturned": ["Kylie", "Moscow", "Glamour"],
+            "Special_SoftGlam_Monolid": ["Kylie", "Moscow", "Glamour"],
+            "Multiple_SoftGlam_Monolid": ["Kylie", "Moscow", "Glamour"],
+            "Special_FullGlam_Almond": ["Barbie", "Love", "Rita", "Casa"],
+            "Special_FullGlam_Hooded": ["Barbie", "Love", "Rita", "Casa"],
+            "Multiple_FullGlam_Almond": ["Barbie", "Love", "Rita", "Casa"],
+            "Multiple_FullGlam_Hooded": ["Barbie", "Love", "Rita", "Casa"],
+            "Special_FullGlam_Upturned": ["Barbie", "Love", "Rita", "Tima", "Casa"],
+            "Multiple_FullGlam_Upturned": ["Barbie", "Love", "Rita", "Tima", "Casa"],
+            "Special_FullGlam_Monolid": ["Tima", "Casa", "Rita"],
+            "Multiple_FullGlam_Monolid": ["Tima", "Casa", "Rita"],
+            "Everyday_Minimal_Almond": ["Honey", "Ika", "Meta 1", "Meta 2", "Meta 3"],
+            "Everyday_Minimal_Hooded": ["Honey", "Ika", "Meta 1", "Meta 2", "Meta 3"],
+            "Everyday_Minimal_Upturned": ["Honey", "Ika", "Meta 1", "Meta 2", "Meta 3"],
+            "Everyday_Minimal_Monolid": ["Honey", "Ika", "Meta 1", "Meta 2", "Meta 3"],
+            "Everyday_SoftGlam_Almond": ["Ika", "Glamour", "Kylie", "Moscow"],
+            "Everyday_SoftGlam_Hooded": ["Ika", "Glamour", "Kylie", "Moscow"],
+            "Everyday_SoftGlam_Upturned": ["Ika", "Glamour", "Kylie", "Moscow"],
+            "Everyday_SoftGlam_Monolid": ["Ika", "Glamour", "Kylie", "Moscow"],
+            "Everyday_FullGlam_Almond": ["Barbie", "Love", "Casablanca"],
+            "Everyday_FullGlam_Hooded": ["Barbie", "Love", "Casablanca"],
+            "Everyday_FullGlam_Upturned": ["Barbie", "Love", "Casablanca"],
+            "Everyday_FullGlam_Monolid": ["Barbie", "Love", "Casablanca"]
+        };
+
+        // Sélection des options sous forme d'images
         const images = document.querySelectorAll('.quizImage');
         images.forEach(image => {
             image.addEventListener('click', function () {
@@ -210,7 +281,7 @@
             });
         });
 
-        // Pour sélectionner des boutons dans les autres questions
+        // Sélection des boutons dans les autres questions
         const buttons = document.querySelectorAll('.option-how-often button');
         buttons.forEach(button => {
             button.addEventListener('click', function () {
@@ -246,26 +317,62 @@
             return results;
         }
 
-        // Gestionnaire de soumission du quiz
-        document.querySelector('.quiz-footer button').addEventListener('click', function () {
-            const quizResults = getQuizResults();
-            console.log(quizResults);
+        // Fonction pour injecter les produits dans le pop-up
+        function displayProductResults(selectedOptions) {
+            const productResultsContainer = document.getElementById('product-results');
+            alert(selectedOptions);
 
-            // Vous pouvez ensuite envoyer ces résultats à un serveur ou les afficher
-            alert("Résultats du quiz : " + JSON.stringify(quizResults));
-        });
-    </script>
+            // Obtenir les produits en fonction des options sélectionnées
+            const key = selectedOptions.join("_"); // Créer une clé unique à partir des options
+            alert(key);
+            const selectedProductNames = combinations[key] || []; // Récupérer les noms des produits
+            alert(selectedProductNames);
 
-    <script>
+            // Filtrer les produits basés sur les noms sélectionnés
+            const selectedProducts = products.filter(product => selectedProductNames.includes(product.name));
+
+            // Créer les éléments HTML pour les produits sélectionnés
+            selectedProducts.forEach(product => {
+                const productHTML = `
+                <article class="carousel-item">
+                    <div class="image">
+                        <a href="${product.link}">
+                            <img src="${product.image}" alt="${product.name}" class="default-image">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <h3 style="font-size : 0.7em; font-family: 'New Century Schoolbook', 'TeX Gyre Schola', serif;">${product.name}</h3>
+                        <p class="price">
+                            <span class="new-price" style="font-size : 0.6em;">${product.newPrice}</span>
+                        </p>
+                        <br>
+                        <a href="${product.link}" class="view-more-btn" style="font-size:0.7em;">View More</a>
+                    </div>
+                </article>
+                `;
+                productResultsContainer.innerHTML += productHTML;
+            });
+
+            // Afficher le pop-up avec les produits
+            document.getElementById('result-popup').classList.add('show');
+        }
+
+        // Fonction pour fermer le pop-up des résultats
+        function closeResultPopup() {
+            /* Supprimer les produits du pop-up */
+            document.getElementById('product-results').innerHTML = '';
+            document.getElementById('result-popup').classList.remove('show');
+        }
+
         // Fonction pour montrer le pop-up de chargement
-        function showLoadingPopup() {
+        function showLoadingPopup(selectedOptions) {
             const loadingPopup = document.getElementById('loading-popup');
             loadingPopup.classList.add('show');
 
             // Simuler un délai de 5 secondes
             setTimeout(() => {
                 hideLoadingPopup(); // Masquer le pop-up après 5 secondes
-                displayQuizResults(); // Afficher les résultats du quiz
+                displayProductResults(selectedOptions); // Afficher le pop-up avec les produits recommandés
             }, 5000);
         }
 
@@ -275,18 +382,28 @@
             loadingPopup.classList.remove('show');
         }
 
-        // Fonction pour afficher les résultats du quiz
-        function displayQuizResults() {
-            const quizResults = getQuizResults();
-            alert("Résultats du quiz : " + JSON.stringify(quizResults));
-            // Vous pouvez remplacer cet alert par une autre action (comme afficher les résultats sur la page)
-        }
-
         // Gestionnaire de soumission du quiz
         document.querySelector('.quiz-footer button').addEventListener('click', function () {
-            showLoadingPopup(); // Montrer le pop-up lors du clic sur Submit
+            const selectedOptions = getSelectedOptions(); // Récupérer les réponses sélectionnées
+            showLoadingPopup(selectedOptions); // Montrer le pop-up de chargement lors du clic sur Submit
         });
+
+        // Fonction pour obtenir les options sélectionnées par l'utilisateur
+        // Fonction pour obtenir les options sélectionnées par l'utilisateur
+        function getSelectedOptions() {
+            const selectedImages = Array.from(document.querySelectorAll('.image-container.selected img')).map(img => img.alt);
+
+            // Modifier ici pour récupérer l'attribut 'data-alt' au lieu du texte des boutons
+            const selectedButtons = Array.from(document.querySelectorAll('.option-how-often button.selected')).map(btn => btn.getAttribute('data-alt'));
+
+            // Afficher dans une alerte les réponses sélectionnées
+            alert(`Selected Images: ${selectedImages.join(', ')}\nSelected Buttons: ${selectedButtons.join(', ')}`);
+
+            return [...selectedButtons, ...selectedImages]; // Combinez les options de boutons et d'images
+        }
+
     </script>
+
 
 
     <!-- Styles -->
@@ -394,7 +511,7 @@
         /* Icône de chargement */
         .fa-spinner {
             font-size: 50px;
-            color: #ff5e78;
+            color: #ff95b5;
         }
     </style>
 
@@ -415,21 +532,41 @@
             opacity: 0;
             transition: visibility 0s, opacity 0.3s;
         }
-    
+
         .result-popup.show {
             visibility: visible;
             opacity: 1;
         }
-    
+
         .result-content {
             background-color: white;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
             width: 80%;
-            max-width: 600px;
+            max-width: 1000px;
+            position: relative;
+            /* Pour placer le bouton de fermeture */
         }
-    
+
+        /* Styliser le bouton "Close" */
+        .result-content button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff95b5;
+            color: white;
+            border: none;
+            padding: 00px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 10px;
+        }
+
+        .result-content button:hover {
+            background-color: #fcabc3;
+        }
+
         /* Styliser les produits affichés */
         .product-carousel {
             display: flex;
@@ -437,7 +574,7 @@
             gap: 10px;
             margin-top: 20px;
         }
-    
+
         .carousel-item {
             border: 1px solid #ccc;
             border-radius: 10px;
@@ -445,144 +582,41 @@
             text-align: center;
             width: 120px;
         }
-    
+
         .carousel-item img {
             width: 100%;
             border-radius: 5px;
             transition: transform 0.3s;
         }
-    
+
         .carousel-item img:hover {
             transform: scale(1.05);
         }
-    
-        .old-price {
-            text-decoration: line-through;
-            color: gray;
-        }
-    
+
         .new-price {
             color: #ff5e78;
+            font-size: 0.6em;
         }
-    
+
+        .content .product-name {
+            font-size: 0.3em;
+            margin-bottom: 0.5em;
+        }
+
         .view-more-btn {
-            background-color: #ff5e78;
-            color: white;
-            padding: 5px 10px;
+            background-color: #ff95b5;
+            color: rgb(255, 255, 255);
+            padding: 5px 20px;
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
-    
+
         .view-more-btn:hover {
-            background-color: #ff2f54;
+            background-color: #fcabc3;
         }
     </style>
 
-    <script>
-        // Liste des produits fictifs (les produits réels devraient être récupérés d'une base de données ou API)
-        const products = [
-            {
-                name: "Kylie",
-                image: "images/faux-cils/KYLIE.png",
-                hoverImage: "images/kylie-3.jpg",
-                oldPrice: "130 DH",
-                newPrice: "110 DH",
-                link: "kylie.html"
-            },
-            {
-                name: "Bella",
-                image: "images/faux-cils/BELLA.png",
-                hoverImage: "images/bella-3.jpg",
-                oldPrice: "150 DH",
-                newPrice: "120 DH",
-                link: "bella.html"
-            },
-            {
-                name: "Mila",
-                image: "images/faux-cils/MILA.png",
-                hoverImage: "images/mila-3.jpg",
-                oldPrice: "140 DH",
-                newPrice: "115 DH",
-                link: "mila.html"
-            },
-            {
-                name: "Selena",
-                image: "images/faux-cils/SELENA.png",
-                hoverImage: "images/selena-3.jpg",
-                oldPrice: "160 DH",
-                newPrice: "130 DH",
-                link: "selena.html"
-            }
-        ];
-    
-        // Fonction pour injecter les produits dans le pop-up
-        function displayProductResults() {
-            const productResultsContainer = document.getElementById('product-results');
-            productResultsContainer.innerHTML = ''; // Effacer les anciens résultats s'il y en a
-    
-            // Choisir aléatoirement 3 à 4 produits
-            const shuffledProducts = products.sort(() => 0.5 - Math.random());
-            const selectedProducts = shuffledProducts.slice(0, Math.floor(Math.random() * 2) + 3); // 3 ou 4 produits
-    
-            // Créer les éléments HTML pour les produits sélectionnés
-            selectedProducts.forEach(product => {
-                const productHTML = `
-                    <article class="carousel-item">
-                        <div class="image">
-                            <a href="${product.link}">
-                                <img src="${product.image}" alt="${product.name}" class="default-image">
-                                <img src="${product.hoverImage}" alt="${product.name} hover" class="hover-image" />
-                            </a>
-                        </div>
-                        <div class="content">
-                            <h3>${product.name}</h3>
-                            <p class="price">
-                                <span class="old-price">${product.oldPrice}</span>
-                                <span class="new-price">${product.newPrice}</span>
-                            </p>
-                            <br>
-                            <a href="${product.link}" class="view-more-btn">View More</a>
-                        </div>
-                    </article>
-                `;
-                productResultsContainer.innerHTML += productHTML;
-            });
-    
-            // Afficher le pop-up avec les produits
-            document.getElementById('result-popup').classList.add('show');
-        }
-    
-        // Fonction pour fermer le pop-up des résultats
-        function closeResultPopup() {
-            document.getElementById('result-popup').classList.remove('show');
-        }
-    
-        // Montrez le pop-up de chargement pendant 5 secondes puis les résultats
-        function showLoadingPopup() {
-            const loadingPopup = document.getElementById('loading-popup');
-            loadingPopup.classList.add('show');
-    
-            // Simuler un délai de 5 secondes
-            setTimeout(() => {
-                hideLoadingPopup(); // Masquer le pop-up après 5 secondes
-                displayProductResults(); // Afficher le pop-up avec les produits recommandés
-            }, 5000);
-        }
-    
-        // Fonction pour masquer le pop-up de chargement
-        function hideLoadingPopup() {
-            const loadingPopup = document.getElementById('loading-popup');
-            loadingPopup.classList.remove('show');
-        }
-    
-        // Gestionnaire de soumission du quiz
-        document.querySelector('.quiz-footer button').addEventListener('click', function () {
-            showLoadingPopup(); // Montrer le pop-up de chargement lors du clic sur Submit
-        });
-    </script>
-    
-    
 
 
 </body>

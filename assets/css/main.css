@@ -4552,7 +4552,7 @@ body.is-mobile.landing #footer {
 /* Style pour les telephone mobiles */
 /* Media Query for Mobile Devices */
 /* Media Query for Mobile Devices */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	#carousel {
 		padding: 0;
 		margin: auto;
@@ -4696,6 +4696,147 @@ body.is-mobile.landing #footer {
   }
 }
 
-/* Style pour la section products */
-/* Section for products grid */	
+@media screen and (max-width: 450px) {
+  #carousel {
+		padding: 0;
+		margin: auto;
+		background: #111; /* Fond plus sombre pour le contraste */
+		color: #fff;
+		position: relative;
+		overflow: hidden; /* Cache le débordement pour garder les éléments du carousel contenus */
+	}
+	
+	.carousel-container {
+		width: 100%; /* Largeur complète */
+		overflow: hidden;
+		display: flex; /* Utilise le modèle flexbox */
+		justify-content: center; /* Centre les éléments horizontalement */
+	}
+	
+	.carousel-wrapper {
+		display: flex;
+		flex-direction: column; /* Aligne les éléments en colonne */
+		align-items: center; /* Centre les éléments dans la colonne */
+		width: 100%; /* Assure que le wrapper prend toute la largeur */
+	}
+	
+	.carousel {
+		display: flex;
+		transition: transform 0.5s ease;
+		width: calc(100%); /* Largeur du carousel */
+		gap: 0.2em; /* Espacement entre les items */
+		flex-wrap: wrap; /* Permet le passage à la ligne */
+		justify-content: center; /* Centre les éléments dans la ligne */
+	}
+	
+	.carousel-item {
+		flex: 1 0 calc(50% - 0.2em); /* Deux éléments par ligne avec un espacement */
+		margin: 0.1em; /* Ajustez cette valeur selon vos besoins */
+	}
+	
 
+  .carousel-item {
+    background: #fff; /* White background for items */
+    border-radius: 2px; /* Rounded corners */
+    margin: 0 0.1em; /* Margin between items */
+    flex: 0 0 calc(100% / 4 - 1em); /* Adjust to fit 4 items */
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .carousel-item:hover {
+    border: #ff95b5 0.25px solid;
+    box-shadow: 0 0 10px #ff95b5;
+    transition: 1s;
+  }
+  .carousel-item .image img {
+    width: 100%; /* Full width for image */
+    height: auto;
+    border-bottom: 2px solid #ddd; /* Light border for separation */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .carousel-item .content h3 {
+	font-size: 0.4em; /* Larger font size for title */
+	margin: 0 0; /* Space between title and price */
+  }
+
+  .carousel-item .content p {
+	font-size: 0.5em; /* Smaller font size for description */
+	color: #666; /* Light grey for description text */
+  }
+
+  /* Price styling */
+  .carousel-item .content .price {
+    font-size: 0.7em; /* Larger font size for price */
+    margin: 0 0;
+    display: flex;
+    flex-direction: column; /* Align prices vertically */
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.05em; /* Subtle spacing between letters */
+  }
+
+  /* Old price with elegant line-through */
+  .carousel-item .content .old-price {
+    text-decoration: line-through;
+    text-decoration-thickness: 1px; /* Fine line for an elegant touch */
+    text-decoration-color: #d3d3d3; /* More subtle line color */
+    color: #a0a0a0; /* Light grey for the old price text */
+    font-size: 0.45em; /* Slightly smaller for the old price */
+  }
+
+  /* New price styling */
+  .carousel-item .content .new-price {
+    color: #141414; /* Black color for the new price */
+    font-size: 0.5em; /* Larger price to make it more visible */
+    font-weight: 650; /* Bold to emphasize */
+  }
+
+  /* Hover effects */
+  .carousel-item:hover .old-price {
+    color: #888; /* Gris plus foncé au survol */
+    text-decoration-color: #ff95b5; /* Changement de couleur de la ligne de traversée sur hover */
+  }
+
+  .carousel-item:hover .new-price {
+    color: #000; /* Keep new price black on hover */
+  }
+
+  .carousel-item .reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.7em; /* Margin before button */
+    padding: 0.5em;
+    padding-bottom: 0;
+	font-size: 0.5em;
+  }
+
+  .carousel-item .stars {
+    color: #ebc700;
+    padding-bottom: 0;
+  }
+
+  .carousel-item .review-count {
+    font-size: 0.3em; /* Slightly larger font size for review count */
+    color: #666;
+	padding-bottom: 0;
+  }
+
+  .carousel-item .button.primary {
+    background: #ff95b5;
+    color: #000;
+    border: none;
+    padding: 0 0.5em;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+	font-size: 0.3em;
+  }
+}
+  

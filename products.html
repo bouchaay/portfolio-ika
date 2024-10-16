@@ -25,21 +25,21 @@
 			<h1 style="color:white;">
 				<a href="index.html">
 					<img src="images/dl-logo-header-modified.png" alt="Lash Image 1"
-						style="width: 4vw; min-width: 70px; max-width: 120px; height: auto; margin: auto; padding: 5px; padding-left: 0px;">
+						style="width: 4vw; min-width: 70px; max-width: 120px; height: auto; margin: auto; padding: 0.5vw; padding-left: 0px;">
 				</a>
 			</h1>
 
+			<!-- Phrase avec animation moderne et chic -->
+			<div class="modern-text-container">
+				<p class="modern-text">Home delivery all over Morocco</p>
+			</div>
+
 			<nav id="nav" style="display: flex; align-items: center; justify-content: flex-end; padding: 10px;">
 				<ul style="display: flex; align-items: center; list-style: none; margin: 0; padding: 0;">
-					<li style="margin-right: 20px; position: relative;">
-						<!-- Icône de panier dans le header -->
-
+					<li style="margin-right: 0px; position: relative;">
 						<a href="cart.html" class="cart-icon" title="View Cart"
 							style="display: flex; align-items: center; text-decoration: none; color: white;">
-							<i class="fas fa-shopping-cart" style="font-size: 1.5em; color: white;"></i>
-							<span id="cart-count">
-								Check your cart
-							</span>
+							<i class="fas fa-shopping-cart" id="icon-cart" style="font-size: 1em; color: white; "></i>
 						</a>
 					</li>
 					<li class="special" style="position: relative;">
@@ -48,7 +48,6 @@
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li><a href="products.html">All Products</a></li>
-								
 								<li><a href="howtowear.html">How To Wear</a></li>
 								<li><a href="review.html">Reviews</a></li>
 								<li><a href="quiz.html">Lash quiz</a></li>
@@ -61,6 +60,8 @@
 				</ul>
 			</nav>
 		</header>
+
+
 
 		<style>
 			/* Icône de panier */
@@ -90,6 +91,7 @@
 				/* Position en haut */
 				right: 55px;
 				/* Position à droite */
+				font-family : "Comic Sans MS", cursive;
 			}
 		</style>
 
@@ -98,7 +100,82 @@
 				pointer-events: none;
 				opacity: 1;
 			}
+
+			/* Conteneur pour le texte animé */
+			.modern-text-container {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				text-align: center;
+				/* Police moderne et élégante */
+				overflow: hidden;
+
+			}
+
+			/* Texte moderne avec animation */
+			.modern-text {
+				font-size: 1.2vw;
+				font-weight: 500;
+				color: white;
+				letter-spacing: 0.2vw;
+				display: inline-block;
+				white-space: nowrap;
+				opacity: 0;
+				animation: slideIn 1s forwards, fadeOut 1s 3s forwards;
+				/* Entrée, puis sortie après 3s */
+				transform: translateY(20px);
+				/* Commence avec un léger décalage vertical */
+				padding-top: 2.75vw;
+				/* Ajoute de l'espace en haut pour le déplacement */
+				font-family : "Comic Sans MS", cursive;
+
+			}
+
+			@keyframes slideIn {
+				0% {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+
+				100% {
+					opacity: 0;
+					transform: translateY(-20px);
+					/* Glisse vers le haut en disparaissant */
+				}
+			}
 		</style>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				const text = document.querySelector('.modern-text');
+				
+				const animateText = () => {
+					// Redémarrer l'animation
+					text.style.animation = 'none';  // Annule l'animation
+					setTimeout(() => {
+						text.style.animation = '';  // Réinitialise pour redémarrer l'animation
+					}, 10);  // Court délai pour permettre à l'animation de se réinitialiser
+				};
+			
+				// Répéter l'animation toutes les 5 secondes
+				setInterval(animateText, 5000);
+			});
+			
+		</script>
 
 
 
@@ -117,7 +194,8 @@
 									<div class="image">
 										<a href="kylie.html">
 											<img src="images/faux-cils/KYLIE.png" alt="Product 1" class="default-image">
-											<img src="images/lashes/kylie-2.jpg" alt="Product 1 hover" class="hover-image" />
+											<img src="images/lashes/kylie-2.jpg" alt="Product 1 hover"
+												class="hover-image" />
 
 										</a>
 									</div>
@@ -159,7 +237,8 @@
 									<div class="image">
 										<a href="rita.html">
 											<img src="images/faux-cils/RITA.png" alt="Product 3" class="default-image">
-											<img src="images/lashes/rita-exc.jpg" alt="Product 1 hover" class="hover-image" />
+											<img src="images/lashes/rita-exc.jpg" alt="Product 1 hover"
+												class="hover-image" />
 										</a>
 									</div>
 									<div class="content">
@@ -179,7 +258,8 @@
 									<div class="image">
 										<a href="ika.html">
 											<img src="images/faux-cils/IKA.png" alt="Product 4" class="default-image">
-											<img src="images/lashes/ika-3.jpg" alt="Product 1 hover" class="hover-image" />
+											<img src="images/lashes/ika-3.jpg" alt="Product 1 hover"
+												class="hover-image" />
 										</a>
 									</div>
 									<div class="content">
@@ -656,10 +736,13 @@
 
 			.carousel-item {
 				position: relative;
-				width: calc(100% - 0.2em); /* Ajuster selon le nombre d'éléments */
-				padding-top: 100%; /* Crée un conteneur carré */
+				width: calc(100% - 0.2em);
+				/* Ajuster selon le nombre d'éléments */
+				padding-top: 100%;
+				/* Crée un conteneur carré */
 				overflow: hidden;
-				margin-bottom: 1em; /* Ajout d'un espacement entre les lignes */
+				margin-bottom: 1em;
+				/* Ajout d'un espacement entre les lignes */
 			}
 
 			.carousel-item:hover {
@@ -669,7 +752,7 @@
 			}
 
 			.carousel-item .image {
-				position: absolute; 
+				position: absolute;
 				top: 0;
 				left: 0;
 				width: 100%;
@@ -677,10 +760,14 @@
 			}
 
 			.carousel-item .image img {
-				width: 100%; /* L'image prend toute la largeur */
-				height: auto; /* Garder le ratio d'aspect de l'image */
-				max-height: 30%; /* Ajuster la hauteur de l'image */
-				object-fit: contain; /* Ajuste l'image sans déformer */
+				width: 100%;
+				/* L'image prend toute la largeur */
+				height: auto;
+				/* Garder le ratio d'aspect de l'image */
+				max-height: 30%;
+				/* Ajuster la hauteur de l'image */
+				object-fit: contain;
+				/* Ajuste l'image sans déformer */
 				border-bottom: 2px solid #ddd;
 				border-top-left-radius: 12px;
 				border-top-right-radius: 12px;
@@ -689,22 +776,23 @@
 			}
 
 			.carousel-item .hover-image {
-				position: absolute; 
+				position: absolute;
 				top: 0;
 				left: 0;
 				width: 100%;
 				height: 100%;
-				opacity: 0; 
-				transition: opacity 0.5s ease; 
+				opacity: 0;
+				transition: opacity 0.5s ease;
 			}
-			
+
 
 			.carousel-item:hover .hover-image {
-				opacity: 1; 
+				opacity: 1;
 			}
 
 			.carousel-item .content h3 {
-				font-size: 0.6em; /* Ajustement */
+				font-size: 0.6em;
+				/* Ajustement */
 				margin: 0;
 			}
 
@@ -715,12 +803,12 @@
 			}
 
 			.carousel-item .content p {
-				font-size: 0.5em; 
+				font-size: 0.5em;
 				color: #666;
 			}
 
 			.carousel-item .content .price {
-				font-size: 0.5em; 
+				font-size: 0.5em;
 				margin: 0;
 				display: flex;
 				flex-direction: column;
@@ -734,12 +822,12 @@
 				text-decoration-thickness: 1px;
 				text-decoration-color: #d3d3d3;
 				color: #a0a0a0;
-				font-size: 1.2em; 
+				font-size: 1.2em;
 			}
 
 			.carousel-item .content .new-price {
 				color: #141414;
-				font-size: 1.8em; 
+				font-size: 1.8em;
 				font-weight: 650;
 			}
 
@@ -752,7 +840,7 @@
 				text-decoration: none;
 				display: block;
 				text-align: center;
-				font-size: 0.7em; 
+				font-size: 0.7em;
 			}
 
 			.carousel-item:hover .old-price {
@@ -767,28 +855,36 @@
 
 		@media (max-width: 500px) {
 			.carousel-item .content h3 {
-				font-size: 0.4em; /* Ajustement */
+				font-size: 0.4em;
+				/* Ajustement */
 				margin: 0;
 			}
 
 			.carousel-item .content .new-price {
-				font-size: 1.2em; 
+				font-size: 1.2em;
 			}
 
 			.carousel-item .content .old-price {
-				font-size: 1em; 
+				font-size: 1em;
 			}
 
 			.carousel-item .view-more-btn {
-				font-size: 0.5em; 
+				font-size: 0.5em;
+			}
+
+			.modern-text {
+				opacity: 0;
+			}
+
+			.modern-text-container {
+				display: none;
 			}
 		}
-
 	</style>
 
-	
 
-	
+
+
 
 </body>
 

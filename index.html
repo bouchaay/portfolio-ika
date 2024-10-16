@@ -26,9 +26,13 @@
 	<div id="page-wrapper">
 
 		<!-- Header -->
+		<!-- Header -->
 		<header id="header" class="alt">
-			<h1 style="color:white;"><a href="index.html"><img src="images/dl-logo-header-modified.png"
-						alt="Lash Image 1" style="width: 4.5%; margin: auto; padding: 5px; padding-left: 0px;"></a>
+			<h1 style="color:white;">
+				<a href="index.html">
+					<img src="images/dl-logo-header-modified.png" alt="Lash Image 1"
+						style="width: 4vw; min-width: 70px; max-width: 120px; height: auto; margin: auto; padding: 5px; padding-left: 0px;">
+				</a>
 			</h1>
 			<nav id="nav">
 				<ul>
@@ -36,15 +40,13 @@
 						<a href="#menu" class="menuToggle"><span>Menu</span></a>
 						<div id="menu">
 							<ul>
-
 								<li><a href="index.html">Home</a></li>
 								<li><a href="products.html">All Products</a></li>
-
 								<li><a href="howtowear.html">How To Wear</a></li>
-								<li><a href="review.html">reviews </a></li>
+								<li><a href="review.html">Reviews</a></li>
+								<li><a href="quiz.html">Lash Quiz</a></li>
 								<li><a href="aboutus.html">About Us</a></li>
-								<li><a href="contactUs.html">Contact us</a></li>
-
+								<li><a href="contactUs.html">Contact Us</a></li>
 							</ul>
 							<a href="#menu" class="close"></a>
 						</div>
@@ -53,15 +55,17 @@
 			</nav>
 		</header>
 
-		<!-- Banner -->
-		<section id="banner" class="video-background">
 
-			<div class="inner" id="inner-banner">
-				<h2 style="top:-340px;">
-					<img src="images/dl-logo-header-modified.png" alt="Lash Image 1" style="width: 13%; margin: auto;">
+
+		<!-- Banner -->
+		<section id="banner" class="video-background" style="position: relative;">
+			<div class="inner" id="inner-banner" style="position: absolute; top: 10vh; left: 50%; transform: translateX(-50%);">
+				<h2>
+					<img src="images/dl-logo-header-modified.png" alt="Lash Image 1" style="width: 13vw; max-width: 150px; height: auto; margin: auto;">
 				</h2>
 			</div>
 		</section>
+		
 
 		<style>
 			.carousel-reviews-container {
@@ -281,75 +285,72 @@
 				<img src="images/how-to-wear-index.png" alt="Lash Image 1"
 					style="width: 28%; margin: auto; padding-bottom:0.5em;">
 				<p style="color:rgb(114, 114, 114); padding-bottom: 2em;">Learn how to apply and clean your lashes like
-					a
-					pro with our step-by-step guides.</p>
+					a pro with our step-by-step guides.</p>
 
-				<div class="inner" style="display: flex; justify-content: space-around; gap: 2em;">
-
+				<div class="inner" style="display: flex; justify-content: space-around; gap: 2em; flex-wrap: wrap;">
 					<!-- Première image - How to Apply -->
 					<div class="image-container"
-						style="position: relative; width: 45%; height: 500px; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
+						style="position: relative; width: 45%; min-width: 300px; height: auto; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
 						<a href="howtowear.html#one">
 							<img src="images/lash-applying-img.png" alt="How to Apply"
-								style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease;">
-
+								style="width: 100%; height: auto; object-fit: contain; transition: transform 0.4s ease, opacity 0.4s ease;">
 							<!-- Couche rose -->
 							<div class="pink-overlay" style="
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							background: rgba(255, 181, 202, 0.5);
-							transition: opacity 0.4s ease;">
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								background: rgba(255, 181, 202, 0.5);
+								transition: opacity 0.4s ease;">
 							</div>
 							<span class="overlay-text" style="
-							position: absolute;
-							top: 50%;
-							left: 50%;
-							transform: translate(-50%, -50%);
-							color: #fff;
-							padding: 1em 2em;
-							border-radius: 30px;
-							font-size: 1.5em;
-							text-transform: uppercase;
-							letter-spacing: 0.05em;
-							opacity: 1;
-							transition: opacity 0.4s ease;
-						  ">How to Apply Lashes ?</span>
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								color: #fff;
+								padding: 1em 2em;
+								border-radius: 30px;
+								font-size: 1.5em;
+								text-transform: uppercase;
+								letter-spacing: 0.05em;
+								opacity: 1;
+								transition: opacity 0.4s ease;
+							  ">How to Apply Lashes ?</span>
 						</a>
 					</div>
 
 					<!-- Deuxième image - How to Clean -->
 					<div class="image-container"
-						style="position: relative; width: 45%; height: 500px; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
+						style="position: relative; width: 45%; min-width: 300px; height: auto; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
 						<a href="howtowear.html#two">
 							<img src="images/lash-cleaning-img.png" alt="How to Clean"
-								style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease;">
+								style="width: 100%; height: auto; object-fit: contain; transition: transform 0.4s ease, opacity 0.4s ease;">
 							<!-- Couche rose -->
 							<div class="pink-overlay" style="
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							background: rgba(255, 181, 202, 0.5);
-							transition: opacity 0.4s ease;">
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								background: rgba(255, 181, 202, 0.5);
+								transition: opacity 0.4s ease;">
 							</div>
 							<span class="overlay-text" style="
-							position: absolute;
-							top: 50%;
-							left: 50%;
-							transform: translate(-50%, -50%);
-							color: #fff;
-							padding: 1em 2em;
-							border-radius: 30px;
-							font-size: 1.5em;
-							text-transform: uppercase;
-							letter-spacing: 0.05em;
-							opacity: 1;
-							transition: opacity 0.4s ease;
-						  ">A Guide to False Lashes</span>
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								color: #fff;
+								padding: 1em 2em;
+								border-radius: 30px;
+								font-size: 1.5em;
+								text-transform: uppercase;
+								letter-spacing: 0.05em;
+								opacity: 1;
+								transition: opacity 0.4s ease;
+							  ">A Guide to False Lashes</span>
 						</a>
 					</div>
 
@@ -372,7 +373,9 @@
 						}
 					</style>
 				</div>
+			</div>
 		</section>
+
 
 		<!-- Reviews Carousel -->
 		<section id="reviews" class="wrapper style1 special" style="background:#ffdfeb;">
@@ -447,33 +450,34 @@
 </section>
 -->
 
-		<!-- Reviews Carousel -->
 		<section id="quiz" class="wrapper style1 special" style="background:#ffdfeb; padding-top: 0px;">
 			<div class="inner">
 				<!-- Image Section -->
 				<img src="images/lash-quiz.png" alt="Lash Image 1" style="width: 45%; margin: auto; display: block;">
 				<p style="color:rgb(114, 114, 114);">Take our quiz to find out which lashes are
 					perfect for you.</p>
-				<img src="images/click-to-start1.png" alt="Lash Image 1" style="width: 40%; margin: auto; display: block;">
+				<img src="images/click-to-start1.png" alt="Lash Image 1"
+					style="width: 40%; margin: auto; display: block;">
 				<div class="image-container"
-					style="position: relative; width: 40%; height: 500px; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); margin: auto;">
+					style="position: relative; width: 100%; max-width: 600px; height: auto; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); margin: auto;">
 					<a href="quiz.html">
 						<img src="images/quiz-img-back.png" alt="Lash Quiz"
-							style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease, opacity 0.4s ease;">
+							style="width: 100%; height: auto; object-fit: contain; transition: transform 0.4s ease, opacity 0.4s ease;">
 						<!-- Couche rose -->
 						<div class="pink-overlay" style="
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							background: rgba(255, 181, 202, 0.25);
-							transition: opacity 0.4s ease;">
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(255, 181, 202, 0.25);
+                    transition: opacity 0.4s ease;">
 						</div>
 					</a>
 				</div>
 			</div>
 		</section>
+
 
 
 

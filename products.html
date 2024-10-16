@@ -22,9 +22,12 @@
 
 		<!-- Header -->
 		<header id="header" class="alt" style="background:#ff95b5;">
-			<h1 style="color:white;"><a href="index.html"><img src="images/dl-logo-header-modified.png"
-				alt="Lash Image 1" style="width: 4.5%; margin: auto; padding: 5px; padding-left: 0px;"></a>
-	</h1>
+			<h1 style="color:white;">
+				<a href="index.html">
+					<img src="images/dl-logo-header-modified.png" alt="Lash Image 1"
+						style="width: 4vw; min-width: 70px; max-width: 120px; height: auto; margin: auto; padding: 5px; padding-left: 0px;">
+				</a>
+			</h1>
 
 			<nav id="nav" style="display: flex; align-items: center; justify-content: flex-end; padding: 10px;">
 				<ul style="display: flex; align-items: center; list-style: none; margin: 0; padding: 0;">
@@ -48,6 +51,7 @@
 								
 								<li><a href="howtowear.html">How To Wear</a></li>
 								<li><a href="review.html">Reviews</a></li>
+								<li><a href="quiz.html">Lash quiz</a></li>
 								<li><a href="aboutus.html">About Us</a></li>
 								<li><a href="contactUs.html">Contact us</a></li>
 							</ul>
@@ -155,7 +159,7 @@
 									<div class="image">
 										<a href="rita.html">
 											<img src="images/faux-cils/RITA.png" alt="Product 3" class="default-image">
-											<img src="images/lashes/rita-2.jpg" alt="Product 1 hover" class="hover-image" />
+											<img src="images/lashes/rita-exc.jpg" alt="Product 1 hover" class="hover-image" />
 										</a>
 									</div>
 									<div class="content">
@@ -292,7 +296,7 @@
 									<div class="image">
 										<a href="meta2.html">
 											<img src="images/faux-cils/META2.png" alt="Product 1" class="default-image">
-											<img src="images/lashes/meta2-2.jpg" alt="Product 1 hover"
+											<img src="images/lashes/meta2-4.jpg" alt="Product 1 hover"
 												class="hover-image" />
 
 										</a>
@@ -623,14 +627,13 @@
 
 	<!-- Style Mobile -->
 	<style>
-		@media (max-width: 768px) {
+		@media (max-width: 1300px) {
 			.carousel-container-products {
 				padding: 0;
 				margin: auto;
 				color: #fff;
 				position: relative;
 				overflow: hidden;
-				/* Cache le débordement pour garder les éléments du carousel contenus */
 			}
 
 			.carousel-wrapper-products {
@@ -642,13 +645,9 @@
 				display: flex;
 				transition: transform 0.5s ease;
 				width: 100%;
-				/* Largeur du carousel */
 				gap: 0.2em;
-				/* Espacement entre les items */
 				flex-wrap: wrap;
-				/* Permet le passage à la ligne */
 				justify-content: center;
-				/* Centre les éléments dans la ligne */
 			}
 
 			.carousel-4-item {
@@ -657,11 +656,10 @@
 
 			.carousel-item {
 				position: relative;
-				width: 100%;
-				height: 500px;
-				/* Ajuste cette valeur selon la hauteur souhaitée */
+				width: calc(100% - 0.2em); /* Ajuster selon le nombre d'éléments */
+				padding-top: 100%; /* Crée un conteneur carré */
 				overflow: hidden;
-				/* Masque tout débordement */
+				margin-bottom: 1em; /* Ajout d'un espacement entre les lignes */
 			}
 
 			.carousel-item:hover {
@@ -670,112 +668,127 @@
 				transition: 1s;
 			}
 
-			.carousel-item .image img {
+			.carousel-item .image {
+				position: absolute; 
+				top: 0;
+				left: 0;
 				width: 100%;
-				/* Largeur complète pour l'image */
-				height: auto;
+				height: 100%;
+			}
+
+			.carousel-item .image img {
+				width: 100%; /* L'image prend toute la largeur */
+				height: auto; /* Garder le ratio d'aspect de l'image */
+				max-height: 50%; /* Ajuster la hauteur de l'image */
+				object-fit: contain; /* Ajuste l'image sans déformer */
 				border-bottom: 2px solid #ddd;
-				/* Bordure légère pour la séparation */
 				border-top-left-radius: 12px;
 				border-top-right-radius: 12px;
-				width: 100%;
-				/* Assure que l'image prend toute la hauteur du conteneur */
-				object-fit: cover;
-				/* Couvre l'espace sans déformation de l'image */
 				transition: opacity 0.5s ease;
-				/* Transition fluide lors du hover */
+
+			}
+
+			.carousel-item .hover-image {
+				position: absolute; 
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0; 
+				transition: opacity 0.5s ease; 
+			}
+			
+
+			.carousel-item:hover .hover-image {
+				opacity: 1; 
 			}
 
 			.carousel-item .content h3 {
-				font-size: 0.7em;
-				/* Taille de police plus grande pour le titre */
+				font-size: 0.6em; /* Ajustement */
 				margin: 0;
-				/* Espace entre le titre et le prix */
 			}
 
 			.carousel-item .content {
 				padding: 1em;
 				padding-top: 0em;
 				padding-bottom: 0em;
-				/* Adjusted padding */
 			}
 
 			.carousel-item .content p {
-				font-size: 0.3em;
-				/* Taille de police plus petite pour la description */
+				font-size: 0.5em; 
 				color: #666;
-				/* Gris clair pour le texte de description */
 			}
 
-			/* Style pour le prix */
 			.carousel-item .content .price {
-				font-size: 0.7em;
-				/* Taille de police plus grande pour le prix */
+				font-size: 0.5em; 
 				margin: 0;
 				display: flex;
 				flex-direction: column;
-				/* Aligne les prix verticalement */
 				justify-content: center;
 				align-items: center;
 				letter-spacing: 0.05em;
-				/* Espacement subtil entre les lettres */
 			}
 
-			/* Ancien prix avec une ligne élégante */
 			.carousel-item .content .old-price {
 				text-decoration: line-through;
 				text-decoration-thickness: 1px;
-				/* Ligne fine pour une touche élégante */
 				text-decoration-color: #d3d3d3;
-				/* Couleur de ligne plus subtile */
 				color: #a0a0a0;
-				/* Gris clair pour le texte de l'ancien prix */
-				font-size: 0.55em;
-				/* Légèrement plus petit pour l'ancien prix */
+				font-size: 1.2em; 
 			}
 
-			/* Style pour le nouveau prix */
 			.carousel-item .content .new-price {
 				color: #141414;
-				/* Couleur noire pour le nouveau prix */
-				font-size: 0.65em;
-				/* Plus grande taille pour rendre plus visible */
+				font-size: 1.8em; 
 				font-weight: 650;
-				/* Gras pour mettre en avant */
-			}
-
-			/* Diminuer la taille des noms des produits */
-			.carousel-item .content h3 {
-				font-size: 0.5em;
-			}
-
-			/* Effets de survol */
-			.carousel-item:hover .old-price {
-				color: #888;
-				/* Gris plus foncé au survol */
-				text-decoration-color: #ff95b5;
-				/* Changement de couleur de la ligne de traversée sur hover */
-			}
-
-			.carousel-item:hover .new-price {
-				color: #000;
-				/* Garder le nouveau prix en noir au survol */
 			}
 
 			.carousel-item .view-more-btn {
 				background: #ff95b5;
 				color: #000;
 				border: none;
-				padding: 0 0.5em;
+				padding: 0 0.1em;
 				border-radius: 4px;
 				text-decoration: none;
-				font-weight: bold;
 				display: block;
 				text-align: center;
-				font-size: 0.3em;
+				font-size: 0.7em; 
+			}
+
+			.carousel-item:hover .old-price {
+				color: #888;
+				text-decoration-color: #ff95b5;
+			}
+
+			.carousel-item:hover .new-price {
+				color: #000;
 			}
 		}
+
+		@media (max-width: 500px) {
+			.carousel-item .content h3 {
+				font-size: 0.4em; /* Ajustement */
+				margin: 0;
+			}
+
+			.carousel-item .content .new-price {
+				font-size: 1.2em; 
+			}
+
+			.carousel-item .content .old-price {
+				font-size: 1em; 
+			}
+
+			.carousel-item .view-more-btn {
+				font-size: 0.5em; 
+			}
+		}
+
 	</style>
+
+	
+
+	
 
 </body>
 

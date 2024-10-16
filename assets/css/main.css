@@ -4169,6 +4169,7 @@ body.is-mobile.landing #footer {
 }
 
 /* Carousel */
+/* Carousel */
 #carousel {
   padding: 3em 0;
   margin: auto;
@@ -4191,7 +4192,7 @@ body.is-mobile.landing #footer {
 .carousel {
   display: flex;
   transition: transform 0.5s ease;
-  width: calc(100% * 4); /* Adjust to the total width for 6 items */
+  width: calc(100% * 4); /* Adjust to the total width for 4 items */
 }
 
 .carousel-item {
@@ -4209,6 +4210,7 @@ body.is-mobile.landing #footer {
   box-shadow: 0 0 10px #ff95b5;
   transition: 1s;
 }
+
 .carousel-item .image img {
   width: 100%; /* Full width for image */
   height: auto;
@@ -4222,10 +4224,8 @@ body.is-mobile.landing #footer {
 }
 
 .carousel-item .content h3 {
-	font-size: 1.2em;
-	/* Taille de police plus grande pour le titre */
-	margin: 0;
-	/* Espace entre le titre et le prix */
+  font-size: 1.2em; /* Larger font size for the title */
+  margin: 0;
 }
 
 /* Price styling */
@@ -4258,14 +4258,15 @@ body.is-mobile.landing #footer {
 
 /* Hover effects */
 .carousel-item:hover .old-price {
-  color: #888; /* Gris plus foncé au survol */
-  text-decoration-color: #ff95b5; /* Changement de couleur de la ligne de traversée sur hover */
+  color: #888; /* Darker grey on hover */
+  text-decoration-color: #ff95b5; /* Change line-through color on hover */
 }
 
 .carousel-item:hover .new-price {
   color: #000; /* Keep new price black on hover */
 }
 
+/* Reviews styling */
 .carousel-item .reviews {
   display: flex;
   flex-direction: column;
@@ -4277,7 +4278,6 @@ body.is-mobile.landing #footer {
 
 .carousel-item .stars {
   color: #ebc700;
-  /*margin-bottom: 0.5em;*/
 }
 
 .carousel-item .review-count {
@@ -4285,6 +4285,7 @@ body.is-mobile.landing #footer {
   color: #666;
 }
 
+/* Button styling */
 .carousel-item .button.primary {
   background: #ff95b5;
   color: #000;

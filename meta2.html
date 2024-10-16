@@ -466,66 +466,63 @@
 	</style>
 
 	<style>
-		/* Media query pour les écrans de 800px et moins */
 		@media (max-width: 768px) {
 			.carousel-container {
-				max-width: 100%;
-				/* Utilise la largeur complète de l'écran */
-				margin: 0 auto;
-				/* Centre le carrousel */
+				max-width: 100%; /* Utilise la largeur complète de l'écran */
+				margin: 0 auto; /* Centre le carrousel */
+				display: flex;
+				flex-direction: column;
+				align-items: center; /* Centre horizontalement */
+				position: relative;
+				border-radius: 0;
 			}
-
+		
+			.carousel {
+				margin: 0; /* Retire les marges latérales */
+				width: 100%; /* Assure que le carrousel utilise toute la largeur */
+			}
+		
 			.carousel-item {
-				height: 50px;
+				height: auto; /* Permet à chaque image de conserver son ratio d'aspect */
+				max-height: 400px; /* Ajuste la hauteur maximale selon votre design */
+				display: none;
+				text-align: center;
 			}
-
+		
 			.carousel-item img {
-				height: auto;
-				/* Permet à l'image de conserver son ratio d'aspect */
-				max-height: 300px;
-				/* Limite la hauteur maximale des images si nécessaire */
+				width: 100%; /* S'assure que l'image s'adapte à la largeur du carrousel */
+				height: auto; /* Permet à l'image de conserver son ratio d'aspect */
+				border-radius: 0;
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 			}
-
+		
 			.carousel-thumbnails {
-				flex-wrap: wrap;
-				/* Permet aux miniatures de passer à la ligne si nécessaire */
-				justify-content: center;
-				/* Centre les miniatures */
+				flex-wrap: wrap; /* Permet aux miniatures de passer à la ligne si nécessaire */
+				justify-content: center; /* Centre les miniatures */
+				margin-top: 15px; /* Espace au-dessus des miniatures */
+				gap: 0px; /* Espace entre les miniatures */
 			}
-
+		
 			.thumbnail-item {
-				max-width: 60px;
-				/* Ajustez la taille des miniatures */
+				max-width: 60px; /* Ajustez la taille des miniatures */
 			}
-
+		
 			.thumbnail-item img {
-				height: 50px;
-				/* Ajustez la hauteur des images des miniatures */
+				height: auto; /* Permet à l'image de conserver son ratio d'aspect */
+				width: 50%; /* Assure que les images de miniatures remplissent le conteneur */
 			}
-
-			.next {
-				right: 44vw;
-				top: 100%;
-				border-radius: 3px 0 0 3px;
-			}
-
-			.prev {
-				left: 21vw;
-				top: 100%;
-				border-radius: 3px 0 0 3px;
-			}
-
-			.prev:hover,
-			.next:hover {
-				background-color: rgba(255, 149, 181, 0.5);
-			}
-
-
-			#cart-count {
-				top: -48px;
-				right: 0px;
+		
+			.prev, .next {
+				padding: 10px;
+				/* Vous pouvez ajuster la position si nécessaire */
 			}
 		}
+
+		#cart-count {
+			top: -48px;
+			right: -10px;
+		}
+		
 	</style>
 </body>
 

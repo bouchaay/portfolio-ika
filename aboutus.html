@@ -71,8 +71,8 @@
 			<div class="inner" style="display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5em;">
 				<!-- Image Section -->
 				<div class="image-container" style="position: relative; overflow: hidden;">
-					<img src="images/about-us-img (1).jpg" alt="Lash Image 1"
-						style="width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+					<img src="images/about-us-img (1).jpg" alt="Lash Image 1" class="img-about-us"
+						style="width: 100%; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
 				</div>
 
 				<style>
@@ -86,8 +86,8 @@
 				<!-- Texte de l'histoire -->
 				<div class="text-container">
 					<h2 class="reviews-title" id="htw"
-						style="font-style: italic; color: #ff95b5; font-size: 1.7em; font-family: 'Pristina', sans-serif; text-align: left; margin-bottom: 1.5em; letter-spacing: 0.05em; text-transform: uppercase;">
-						<img src="images/it-all-started.png" alt="Lash Image 1" style="width: 95%; margin: auto;">
+						>
+						<img src="images/it-all-started.png" alt="Lash Image 1" class="img-about-us" style="width: 95%; margin: auto;">
 					</h2>
 					<p
 						style="color:rgb(0, 0, 0); line-height: 1.75; font-size: 0.7em; text-align: left; font-family: 'Open Sans', sans-serif;">
@@ -138,6 +138,32 @@
 
 							100% {
 								color: rgb(114, 114, 114);
+							}
+						}
+
+						@media screen and (max-width: 768px) {
+							/* Mettre le texte sous l'image */
+							.text-container {
+								grid-row: 2;
+								grid-column: 1 / -1;
+								text-align: center; /* Centre le texte */
+							}
+			
+							.image-container {
+								grid-column: 1 / -1; /* Prend toute la largeur du conteneur */
+								text-align: center; /* Centre le contenu */
+							}
+			
+							.image-container img {
+								width: 90%; /* Ajuste la largeur de l'image */
+								height: auto; /* Permet à l'image de conserver son ratio d'aspect */
+								margin: 0 auto; /* Centre l'image */
+							}
+			
+							.reviews-title img {
+								width: 300%;
+								height: auto; /* Permet à l'image de conserver son ratio d'aspect */
+								margin-left: -100px;
 							}
 						}
 					</style>

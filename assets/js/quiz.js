@@ -34,10 +34,10 @@ const combinations = {
     "Multiple_SoftGlam_Upturned": ["Kylie", "Moscow", "Glamour"],
     "Special_SoftGlam_Monolid": ["Kylie", "Moscow", "Glamour"],
     "Multiple_SoftGlam_Monolid": ["Kylie", "Moscow", "Glamour"],
-    "Special_FullGlam_Almond": ["Barbie", "Love", "Rita", "Casa"],
-    "Special_FullGlam_Hooded": ["Barbie", "Love", "Rita", "Casa"],
-    "Multiple_FullGlam_Almond": ["Barbie", "Love", "Rita", "Casa"],
-    "Multiple_FullGlam_Hooded": ["Barbie", "Love", "Rita", "Casa"],
+    "Special_FullGlam_Almond": ["Barbie", "Love", "Rita", "Casablanca"],
+    "Special_FullGlam_Hooded": ["Barbie", "Love", "Rita", "Casablanca"],
+    "Multiple_FullGlam_Almond": ["Barbie", "Love", "Rita", "Casablanca"],
+    "Multiple_FullGlam_Hooded": ["Barbie", "Love", "Rita", "Casablanca"],
     "Special_FullGlam_Upturned": ["Barbie", "Love", "Rita", "Tima"], // Casa
     "Multiple_FullGlam_Upturned": ["Barbie", "Love", "Rita", "Tima"], // Casa
     "Special_FullGlam_Monolid": ["Tima", "Casa", "Rita"],

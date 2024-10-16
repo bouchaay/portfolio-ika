@@ -4729,11 +4729,6 @@ body.is-mobile.landing #footer {
 		justify-content: center; /* Centre les éléments dans la ligne */
 	}
 	
-	.carousel-item {
-		flex: 1 0 calc(50% - 0.2em); /* Deux éléments par ligne avec un espacement */
-		margin: 0.1em; /* Ajustez cette valeur selon vos besoins */
-	}
-	
 
   .carousel-item {
     background: #fff; /* White background for items */
@@ -4752,7 +4747,6 @@ body.is-mobile.landing #footer {
   }
   .carousel-item .image img {
     width: 100%; /* Full width for image */
-    height: auto;
     border-bottom: 2px solid #ddd; /* Light border for separation */
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;

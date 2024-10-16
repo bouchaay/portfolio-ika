@@ -24,11 +24,11 @@
         <!-- Header -->
         <header id="header" class="alt" style="background:#ff95b5;">
             <h1 style="color:white;">
-				<a href="index.html">
-					<img src="images/dl-logo-header-modified.png" alt="Lash Image 1"
-						style="width: 4vw; min-width: 70px; max-width: 120px; height: auto; margin: auto; padding: 5px; padding-left: 0px;">
-				</a>
-			</h1>
+                <a href="index.html">
+                    <img src="images/dl-logo-header-modified.png" alt="Lash Image 1"
+                        style="width: 4vw; min-width: 70px; max-width: 120px; height: auto; margin: auto; padding: 5px; padding-left: 0px;">
+                </a>
+            </h1>
 
             <nav id="nav" style="display: flex; align-items: center; justify-content: flex-end; padding: 10px;">
                 <ul style="display: flex; align-items: center; list-style: none; margin: 0; padding: 0;">
@@ -136,7 +136,8 @@
 
                         <!-- Submit Button -->
                         <div class="quiz-footer">
-                            <p style="color:rgb(114, 114, 114);">Take a look at our recommended products for you by clicking the button below.</p>
+                            <p style="color:rgb(114, 114, 114);">Take a look at our recommended products for you by
+                                clicking the button below.</p>
                             <button>Get Results</button>
                         </div>
                     </div>
@@ -145,19 +146,19 @@
         </section>
 
         <section id="one" class="wrapper style1 special"
-			style="background:#ffdfeb; padding-top:0px; padding-bottom:0px;">
-			<div class="inner">
-				<!-- Image Section -->
-				<img src="images/Why us .png" alt="Lash Image 1" style="width: 45%; margin: auto;">
+            style="background:#ffdfeb; padding-top:0px; padding-bottom:0px;">
+            <div class="inner">
+                <!-- Image Section -->
+                <img src="images/Why us .png" alt="Lash Image 1" style="width: 45%; margin: auto;">
 
-				<div class="image-about-us">
-					<div class="image-item-abt-us">
-						<img src="images/Why-us-img.png" alt="Lash Image 1" style="width: 65%; margin: auto;">
-					</div>
-					<br>
-				</div>
-			</div>
-		</section>
+                <div class="image-about-us">
+                    <div class="image-item-abt-us">
+                        <img src="images/Why-us-img.png" alt="Lash Image 1" style="width: 65%; margin: auto;">
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer id="footer">
@@ -430,6 +431,7 @@
 
     <style>
         @media screen and (max-width: 600px) {
+
             /* centrer les questions */
             .question {
                 margin-bottom: 2em;
@@ -442,10 +444,92 @@
             }
 
             /* ajouter du padding au premier titre */
-            #quiz{
+            #quiz {
                 margin-top: 2em;
             }
-            
+
+        }
+    </style>
+
+    <style>
+        @media screen and (max-width: 950px) {
+
+            /* Styliser le conteneur de résultats */
+            .result-popup {
+                overflow-y: auto;
+                /* Ajouter le défilement vertical */
+                max-height: 80%;
+                /* Limiter la hauteur du pop-up */
+            }
+
+            .result-content {
+                display: flex;
+                flex-direction: column;
+                /* Afficher les produits en colonne */
+                align-items: center;
+                /* Centrer les éléments */
+            }
+
+            /* Styliser les produits affichés */
+            .product-carousel {
+                display: flex;
+                flex-direction: column;
+                /* Passer en mode colonne */
+                justify-content: flex-start;
+                /* Alignement au début */
+                align-items: center;
+                /* Centrer les éléments */
+                gap: 10px;
+                /* Espace entre les produits */
+                margin-top: 20px;
+                max-height: 400px;
+                /* Limiter la hauteur */
+                overflow-y: auto;
+                /* Défilement si nécessaire */
+                width: 100%;
+                /* Prendre toute la largeur */
+            }
+
+            .carousel-item {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 10px;
+                text-align: center;
+                width: 80%;
+                /* Largeur des produits */
+            }
+
+            /* Bouton Close */
+            .result-popup button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: #ff95b5;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+                text-align: center;
+                line-height: 30px;
+                cursor: pointer;
+                z-index: 1;
+                padding-right: 2px;
+                /* Pour s'assurer qu'il est toujours au-dessus du contenu */
+            }
+
+            .result-popup button:hover {
+                background-color: #fcabc3;
+            }
+
+            /* Contenu du pop-up */
+            .result-content {
+                padding-top: 50px;
+                /* Ajout d'un padding pour que le bouton ne chevauche pas le titre */
+                position: relative;
+                /* Nécessaire pour positionner correctement le bouton absolu */
+            }
         }
     </style>
 
